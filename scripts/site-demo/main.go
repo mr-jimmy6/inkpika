@@ -11,6 +11,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mr-jimmy6/inkpika/internal/buildinfo"
 	"github.com/mr-jimmy6/inkpika/internal/i18n"
 	"github.com/mr-jimmy6/inkpika/internal/syncer"
 	qrcode "github.com/skip2/go-qrcode"
@@ -78,7 +79,7 @@ func main() {
 		{"wireless-device", "internal/transfer/assets/", "device.html", "device.js", "internal/transfer/assets/style.css"},
 		{"settings-device", "internal/settings/assets/", "device.html", "device.js", "internal/transfer/assets/style.css"},
 	} {
-		html := string(read(entry.source + entry.html))
+		html := string(buildinfo.HTML(read(entry.source + entry.html)))
 		html = strings.ReplaceAll(html, `href="/device.css"`, `href="settings-detail.css"`)
 		html = strings.ReplaceAll(html, `src="/connection.js"`, `src="wireless-device.js"`)
 		html = strings.ReplaceAll(html, `src="/i18n.js"`, `src="../../assets/i18n.js"`)

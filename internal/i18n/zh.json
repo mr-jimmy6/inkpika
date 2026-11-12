@@ -661,5 +661,19 @@
   "Try the cloud library and download tabs. Open Settings to review configuration and run a sample connection test.": "体验云端书库和下载列表，打开配置设置查看配置并进行样例连接测试。",
   "Sample configuration saved. Refresh Configuration in Settings to view it; no real device was changed.": "样例配置已保存。在配置设置中刷新配置信息即可查看；真实设备未更改。",
   "Folders and downloads": "目录与下载",
-  "View, test and edit": "查看、测试与编辑"
+  "View, test and edit": "查看、测试与编辑",
+  "Built (UTC)": "构建时间（UTC）",
+  "Save folder": "保存目录",
+  "Pairing QR code": "配对二维码",
+  "Phone: scan to connect": "手机：扫码连接",
+  "Computer: open this address": "电脑：打开此地址",
+  "Connection code": "连接码",
+  "Use the same Wi-Fi and keep Kindle awake.": "请连接同一 Wi-Fi，并保持 Kindle 唤醒。",
+  "To stop: KUAL → InkPika → Background services →": "关闭服务：KUAL → InkPika → 后台服务管理 →",
+  "Tests use saved settings. Edit them on your phone or computer.": "使用已保存的配置测试；可在“手机 / 电脑”中扫码修改。",
+  "Transfer direction": "传书方向",
+  "Cloud storage": "云端存储",
+  "Books and downloads": "图书与下载",
+  "Advanced: proxy, certificates, tokens": "高级设置：代理、证书与令牌",
+  "Test in progress; select Refresh shortly to see the results.": "测试进行中，请稍后点击“刷新”查看结果。"
 }

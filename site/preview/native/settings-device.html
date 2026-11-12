@@ -1,31 +1,25 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Settings · InkPika</title><link rel="stylesheet" href="settings-device.css"><link rel="stylesheet" href="settings-detail.css"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'"><link rel="icon" href="../../assets/favicon.svg"><link rel="stylesheet" href="../native-fit.css"></head>
-<body data-demo-screen="settings-device"><div class="page"><p class="note">InkPika</p>
-<h1>Settings</h1>
-<nav class="tabs"><button id="configuration-tab" class="selected">Configuration</button><button id="pairing-tab">Phone / computer</button></nav>
-    <section id="configuration">
-      <div class="toolbar"><strong>Saved configuration</strong><button id="refresh-config" class="small right">Refresh info</button></div>
-      <p id="config-message" class="meta" role="status"></p>
-      <table id="config-fields" class="config-fields"></table>
-      <p class="meta config-note">Connection tests use the saved settings. Restart the cloud service after editing its configuration file manually.</p>
-      <div class="toolbar check-toolbar"><strong>Connection test</strong><button id="start-check" class="small right">Start test</button></div>
-      <p id="check-message" class="meta" role="status" aria-live="polite"></p>
-      <div id="check-result" aria-live="polite"></div>
-    </section>
-<section id="pairing" hidden>
-<div class="heading"><h1 id="title">Connecting…</h1><button id="refresh">Refresh connection info</button></div>
-<p id="description"></p>
-<p id="message" role="status">Loading connection info…</p>
+<body data-demo-screen="settings-device"><div class="page"><h1 class="visually-hidden">Settings</h1>
+<div class="settings-navigation"><nav class="tabs" aria-label="Settings"><button id="configuration-tab" class="selected" aria-pressed="true">Configuration</button><button id="pairing-tab" aria-pressed="false">Phone / computer</button></nav><div class="nav-action"><button id="refresh-config" class="small">Refresh</button><button id="refresh" class="small" hidden>Refresh</button></div></div>
+<section id="configuration">
+<p id="config-message" class="meta" role="status"></p>
+<table id="config-fields" class="config-fields" aria-label="Saved configuration"></table>
+<div class="toolbar check-toolbar"><strong>Connection test</strong><button id="start-check" class="small right">Start test</button></div>
+<p id="check-message" class="meta" role="status" aria-live="polite"></p><div id="check-result" aria-live="polite"></div>
+<p class="note config-note">Tests use saved settings. Edit them on your phone or computer.</p>
+</section><section id="pairing" hidden>
+<span id="title" class="visually-hidden">Connecting…</span><p id="description" hidden></p>
+<p id="message" class="connection-state" role="status">Loading connection info…</p>
 <section id="connection" hidden>
+<div class="connection-network"><span>Current Wi-Fi</span>: <strong id="wifi"></strong><span id="ip" hidden></span></div>
 <label id="network-choice" hidden>Network address <select id="network"></select></label>
-<dl><dt>Current Wi-Fi</dt><dd id="wifi"></dd><dt>Device IP</dt><dd id="ip"></dd><dt>Web address</dt><dd id="endpoint" class="endpoint"></dd></dl>
-<div class="connect-guide"><div class="qr"><img id="qr" width="300" height="300" alt="Wireless transfer QR code"></div><div class="guide">
-<p><strong>Scan with a phone</strong><br>Scan the QR code on the left and open it in a browser.</p>
-<p><strong>Enter address on a computer</strong><br>Open the address above in a browser, then enter the connection code:</p>
-<p id="code" class="code"></p>
+<div class="connect-guide"><div class="qr"><img id="qr" width="260" height="260" alt="Pairing QR code"><p class="note">Phone: scan to connect</p></div><div class="guide">
+<p class="guide-title">Computer: open this address</p><p id="endpoint" class="endpoint"></p>
+<p class="code-label">Connection code</p><p id="code" class="code"></p>
 </div></div>
-<p class="note">Connect your phone or computer to the same Wi-Fi as Kindle. Keep Kindle awake during use.</p>
-<p class="note">Stop service: KUAL → Background services → <span id="stop-label"></span>。</p>
+<p class="note">Use the same Wi-Fi and keep Kindle awake.</p>
+<p class="note service-help"><span>To stop: KUAL → InkPika → Background services → </span><span id="stop-label"></span></p>
 </section>
 </section>
-</div><script src="../../assets/i18n.js"></script><script src="../bridge.js"></script><script src="settings-device.js"></script><script src="wireless-device.js"></script></body></html>
+<footer class="app-footer"><span class="footer-brand">InkPika · 0.0.1.dev</span><span class="footer-build"><span>Built (UTC)</span>: <span>Not packaged (source run)</span></span></footer></div><script src="../../assets/i18n.js"></script><script src="../bridge.js"></script><script src="settings-device.js"></script><script src="wireless-device.js"></script></body></html>

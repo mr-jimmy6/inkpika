@@ -1,12 +1,13 @@
-h1{margin-bottom:12px}
-.tabs{display:table;width:100%;border:2px solid #000;margin:12px 0}
-.tabs button{display:table-cell;width:50%;border:0;min-height:60px}
-.toolbar{overflow:hidden;margin:12px 0;line-height:54px}.toolbar strong{font-size:24px}
-.small{font-size:20px}.right{float:right}.meta,.job-error{font-size:20px;word-wrap:break-word}
-.config-fields{width:100%;border-collapse:collapse;table-layout:fixed;font-size:20px;line-height:1.5}
-.config-fields th,.config-fields td{padding:7px 0;border-bottom:1px solid #000;text-align:left;vertical-align:top;word-wrap:break-word}
-.config-fields th{width:200px;padding-right:14px;font-weight:bold}
-.config-note{margin:10px 0 14px}
-.check-toolbar{border-top:2px solid #000;padding-top:10px}
-.check-stages{margin:8px 0;line-height:1.5;font-size:22px;font-weight:bold}
-@media(max-width:520px){.config-fields th{width:125px;padding-right:10px}.tabs button{font-size:18px}}
+.settings-navigation{display:table;width:100%;table-layout:fixed;margin:0 0 12px}
+.tabs{display:table-cell;border:2px solid #000;vertical-align:middle}
+.tabs button{width:50%;border:0;min-height:50px;padding:6px;font-size:21px;vertical-align:middle}
+.nav-action{display:table-cell;width:116px;text-align:right;vertical-align:middle}.nav-action button{font-size:18px}
+.toolbar{overflow:hidden;margin:12px 0 8px;line-height:48px}.toolbar strong{font-size:22px}
+.small{font-size:18px}.right{float:right}.meta,.job-error{font-size:18px;line-height:1.45;word-wrap:break-word}
+.config-fields{width:100%;border-collapse:collapse;table-layout:fixed;font-size:20px;line-height:1.4}
+.config-fields th,.config-fields td{padding:8px 0;border-bottom:1px solid #aaa;text-align:left;vertical-align:top;word-wrap:break-word}
+.config-fields th{width:205px;padding-right:14px;font-weight:normal}.config-fields td{font-weight:bold}
+.config-note{margin:12px 0 0}
+.check-toolbar{border-top:2px solid #000;padding-top:10px;margin-top:18px}
+.check-stages{margin:8px 0;line-height:1.5;font-size:20px}.check-stages>div{padding:5px 0;border-bottom:1px solid #aaa}
+@media(max-width:560px){.config-fields{font-size:18px}.config-fields th{width:130px;padding-right:10px}.tabs button{font-size:17px;min-height:54px}.nav-action{width:84px}.nav-action button{font-size:16px;padding:6px}.toolbar strong{font-size:20px}.check-stages{font-size:18px}}

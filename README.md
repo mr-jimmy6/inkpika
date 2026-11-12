@@ -12,9 +12,9 @@ Transfer books between your phone, computer and Kindle over Wi-Fi, or download e
 
 InkPika is intended for Kindle users across generations. Installation requires jailbreak and KUAL. Device requirements and adaptation notes are in the [compatibility guide](docs/DEVICE_COMPATIBILITY.md); feature and device test results are in the [validation record](docs/DEVICE_VALIDATION.md).
 
-![InkPika feature overview: native reading, wireless book transfer, phone configuration, and cloud downloads](docs/images/feature-overview-en.svg)
+![InkPika feature overview: native reading, wireless book transfer, phone configuration, and cloud downloads](docs/images/feature-overview-en.png)
 
-> **In development · 0.0.1.dev** — [Build the package](README_DEV.md#构建与检查). Package: `inkpika-0.0.1.dev-armv5.zip` and its `.zip.sha256`. Configuration pages show the version and UTC package time.
+> **In development · 0.0.1.dev** — [Build the package](README_DEV.md#构建与检查). Package: `inkpika-0.0.1.dev-armv5.zip` and its `.zip.sha256`. Every web page shows the version and UTC build time in its footer.
 
 [Best practices](#best-practices) · [Compare transfer methods](#compare-transfer-methods) · [Installation](#installation) · [Wireless transfer](#wireless-transfer) · [Cloud configuration](#configure-from-your-phone-or-computer) · [Troubleshooting](#troubleshooting) · [Developer guide](README_DEV.md)
 
@@ -25,7 +25,7 @@ This guide uses the English interface labels. A complete [Chinese guide](README_
 - **Send books directly from your phone:** Connect your phone and Kindle to the same Wi-Fi, open Wireless Transfer on the Kindle, then scan to pair and upload books from your phone. Everyday transfers need no PC, cloud account, or extra phone transfer app. Open compatible files in the native reader after they are saved and indexed.
 - **Translate a paper, then sync it from the cloud:** Use your own Hermes or similar agent to translate an English paper, create a Kindle-readable ebook, and upload it to your object storage's `sync/` directory. Select Start Sync on the Kindle to download it for local reading.
 
-![Best practices: scan to upload books from a phone, or use your own agent to translate a paper, upload it to cloud storage, and sync it to Kindle](docs/images/best-practices-en.svg)
+![Best practices: scan to upload books from a phone, or use your own agent to translate a paper, upload it to cloud storage, and sync it to Kindle](docs/images/best-practices-en.png)
 
 The illustrations show example workflows. The actual transfer entry is **KUAL → InkPika → Wireless transfer [web]**; pair using the QR code currently displayed on your device. Set up Feishu, Hermes, or a similar agent yourself for the paper workflow. These external tools handle translation, ebook creation, and upload; InkPika checks and downloads the cloud books.
 
@@ -51,7 +51,7 @@ See the [device compatibility document](docs/DEVICE_COMPATIBILITY.md) for InkPik
 - **Wireless transfers in both directions:** Pair by scanning a QR code on your phone or entering a code in a computer browser. Upload books in batches, or search and download books from the Kindle. No cloud account is needed.
 - **Two ways to download from the cloud:** Start a sync in KUAL to automatically check and download missing or updated books under `sync/`, or browse the graphical bookshelf and download selected books. Sync starts when you click; it is not a scheduled task.
 - **Multiple cloud providers and ways to add books:** Use Alibaba Cloud OSS, QingStor, Azure Blob, or S3-compatible object storage on a public cloud or NAS, with optional SOCKS5 proxy support. Upload books to your own cloud library through the provider's management interface, an agent with the appropriate tools and authorization, or an API, then read them from Kindle.
-- **Configure by QR code:** Open Configuration on Kindle, then scan with your phone to enter credentials, folders, and format settings without typing on the Kindle screen. A computer browser works too.
+- **Configure by QR code:** Open Settings → Phone / computer on Kindle, then scan with your phone to enter credentials, folders, and format settings without typing on the Kindle screen. A computer browser works too.
 
 | What you want to do | Entry point | What it does |
 | --- | --- | --- |

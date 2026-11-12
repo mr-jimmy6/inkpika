@@ -95,7 +95,7 @@ func (s *Server) serve(w http.ResponseWriter, r *http.Request) {
 	}
 	data, _ := assets.ReadFile("assets/" + file)
 	if file == "index.html" {
-		data = i18n.HTML(data, w.Header().Get("Content-Language"))
+		data = i18n.HTML(buildinfo.HTML(data), w.Header().Get("Content-Language"))
 	}
 	w.Header().Set("Content-Type", typ)
 	_, _ = w.Write(data)

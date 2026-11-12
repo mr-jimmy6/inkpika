@@ -8,7 +8,7 @@
 - English introduction: Transfer books between your phone, computer and Kindle over Wi-Fi, or download ebooks from your own object storage and open them in the native Kindle reader.
 - Chinese introduction: 通过 Wi-Fi 在手机、电脑与 Kindle 之间传书，也可从自己的对象存储下载电子书，在 Kindle 原生阅读器中打开。
 
-The actual repository remains [github.com/mr-jimmy6/inkpika](https://github.com/mr-jimmy6/inkpika). Keep its working URLs until a separate repository rename is authorized; `inkpika` is the suggested repository name. The [Pages URL](https://mr-jimmy6.github.io/inkpika/) and [interactive demo URL](https://mr-jimmy6.github.io/inkpika/preview/index.html) use that repository path. Local file changes do not publish either page.
+The public source repository is [github.com/mr-jimmy6/inkpika](https://github.com/mr-jimmy6/inkpika). The [Pages URL](https://mr-jimmy6.github.io/inkpika/) and [interactive demo URL](https://mr-jimmy6.github.io/inkpika/preview/index.html) use that repository path. Local file changes do not publish either page.
 
 ## Files
 
@@ -29,7 +29,7 @@ From the repository root, regenerate public assets without running tests:
 GOTOOLCHAIN=go1.23.12 go run ./scripts/site-demo
 ```
 
-For a later, separately authorized browser review, serve `site/` on loopback:
+For browser layout review, serve `site/` on loopback:
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory site
@@ -41,6 +41,6 @@ Review English/Chinese content, narrow layouts, keyboard navigation, all demo en
 
 The installation entry names `inkpika-0.0.1.dev-armv5.zip` and its SHA-256 file. Local builds are available through the developer workflow; the Releases link is for packages after publication. Explain jailbreak, KUAL and the unverified device scope before installation. The agent prompt uses the prepared binary and requires a user-authorized target; SSH private keys stay on the user's computer.
 
-`.github/workflows/pages.yml` is a manually triggered Pages deployment that uploads only `site/`. Publishing requires a separate authorized push and workflow run. Follow the repository's Gitleaks requirement before any push. This local release preparation performs neither action.
+`.github/workflows/pages.yml` is a manually triggered Pages deployment that uploads only `site/`. GitHub Pages is configured to deploy through GitHub Actions. After an authorized source push, publish the selected commit with `gh workflow run pages.yml --ref main` and check the deployment result. A source push alone does not publish the site. Follow the repository's Gitleaks requirement before every push.
 
 Keep [device compatibility](DEVICE_COMPATIBILITY.md), [validation scope](DEVICE_VALIDATION.md), [release notes](../RELEASE_NOTES.md) and both READMEs consistent. PW2 is the engineering baseline; describe only the coverage established for the exact tested build.

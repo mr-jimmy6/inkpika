@@ -1,27 +1,38 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Settings · InkPika</title><link rel="stylesheet" href="settings.css"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'"><link rel="icon" href="../../assets/favicon.svg"><link rel="stylesheet" href="../native-fit.css"></head>
-<body data-demo-screen="settings"><div class="page"><p class="note">InkPika</p><h1>Settings</h1><p>Configure InkPika from a computer or phone.</p>
+<body data-demo-screen="settings"><div class="page"><h1>Settings</h1>
 <form id="pair"><label for="code">Six-digit connection code shown on Kindle</label><div class="pair-row"><input id="code" type="tel" inputmode="numeric" autocomplete="off" maxlength="6" pattern="[0-9]{6}" required><button id="connect" type="submit">Connect</button></div></form>
 <p id="message" role="status" aria-live="polite"></p>
 <form id="configuration" hidden>
-<p class="note"><span>Version</span>: <span id="build-version"></span><br><span>Packaged at (UTC)</span>: <span id="build-time"></span></p>
-<div class="field"><label for="language">Interface language</label><select id="language"><option value="auto">Follow Kindle</option><option value="en">English</option><option value="zh">中文</option></select><p class="note">Applies to Kindle and its shared web pages. Unsupported device languages use English; visitor language is ignored.</p><button id="save-language" type="button">Save language only</button></div>
+<div class="field language-field"><label for="language">Interface language</label><select id="language"><option value="auto">Follow Kindle</option><option value="en">English</option><option value="zh">中文</option></select><button id="save-language" type="button">Save language only</button></div>
+<section class="field-group"><h2>Cloud storage</h2>
 <div class="field"><label for="provider">Storage platform</label><select id="provider"><option value="aliyun_oss">Alibaba Cloud OSS</option><option value="qingstor">QingStor</option><option value="s3:aws">Amazon S3</option><option value="s3:tos">Volcengine TOS</option><option value="azure_blob">Microsoft Azure Blob Storage</option><option value="s3:ibm">IBM Cloud Object Storage</option><option value="s3:gcs">Google Cloud Storage</option><option value="s3:cos">Tencent COS</option><option value="s3:r2">Cloudflare R2</option><option value="s3:b2">Backblaze B2</option><option value="s3:spaces">DigitalOcean Spaces</option><option value="s3:custom">Custom S3 / NAS</option></select></div>
-<div id="s3-options" hidden>
-<div class="field"><label for="s3_addressing">Bucket addressing</label><select id="s3_addressing"><option value="">Automatic</option><option value="path">Path style (Endpoint/Bucket)</option><option value="virtual">Virtual hosted (Bucket.Endpoint)</option></select><p class="note">NAS typically uses path style. Connect to S3 interfaces from Garage, SeaweedFS, MinIO / AIStor and similar software. Verify your specific version.</p></div></div>
+<div class="field-grid">
 <div class="field"><label for="bucket">Bucket</label><input id="bucket" required autocapitalize="off" spellcheck="false"></div>
 <div class="field"><label for="region">Region</label><input id="region" required placeholder="e.g. cn-beijing or pek3b" autocapitalize="off" spellcheck="false"></div>
+</div>
 <div class="field"><label for="endpoint">Endpoint</label><input id="endpoint" type="url" placeholder="HTTPS address without the bucket" autocapitalize="off" spellcheck="false"><p id="provider-help" class="note"></p></div>
-<div class="field"><label for="prefix">Cloud folder scope (leave blank for the whole bucket)</label><input id="prefix" placeholder="e.g. books/" autocapitalize="off" spellcheck="false"></div>
-<div class="field"><label for="download_dir">Kindle download folder</label><input id="download_dir" required autocapitalize="off" spellcheck="false"><p class="note">Must be under /mnt/us/documents. Changing folders or storage sources does not move or delete existing books.</p></div>
-<div class="field"><label for="max_download_mb">Cloud download limit per book (MB)</label><input id="max_download_mb" type="number" min="1" max="16384" required></div>
-<div class="field"><label for="ebook_formats">Allowed ebook formats</label><input id="ebook_formats" autocapitalize="off" spellcheck="false" placeholder="Leave blank for built-in formats, e.g. azw3, pdf, txt"><p id="format-help" class="note"></p><p class="note">Used by wireless uploads, local book downloads, the cloud library and KUAL sync. Filters by extension; does not convert formats.</p></div>
+<div class="field-grid">
 <div class="field"><label for="access_key_id">AccessKey ID</label><input id="access_key_id" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
 <div class="field"><label for="secret_access_key">AccessKey Secret</label><input id="secret_access_key" type="password" autocomplete="new-password"></div>
+</div>
 <p class="note">Saved credentials are masked. Leave blank to keep them; enter a value to replace them.</p>
+<div id="s3-options" hidden>
+<div class="field"><label for="s3_addressing">Bucket addressing</label><select id="s3_addressing"><option value="">Automatic</option><option value="path">Path style (Endpoint/Bucket)</option><option value="virtual">Virtual hosted (Bucket.Endpoint)</option></select><p class="note">NAS typically uses path style. Connect to S3 interfaces from Garage, SeaweedFS, MinIO / AIStor and similar software. Verify your specific version.</p></div></div>
+</section>
+<section class="field-group"><h2>Books and downloads</h2>
+<div class="field"><label for="prefix">Cloud folder scope (leave blank for the whole bucket)</label><input id="prefix" placeholder="e.g. books/" autocapitalize="off" spellcheck="false"></div>
+<div class="field"><label for="download_dir">Kindle download folder</label><input id="download_dir" required autocapitalize="off" spellcheck="false"><p class="note">Must be under /mnt/us/documents. Changing folders or storage sources does not move or delete existing books.</p></div>
+<div class="field"><label for="ebook_formats">Allowed ebook formats</label><input id="ebook_formats" autocapitalize="off" spellcheck="false" placeholder="Leave blank for built-in formats, e.g. azw3, pdf, txt"><p id="format-help" class="note"></p><p class="note">Used by wireless uploads, local book downloads, the cloud library and KUAL sync. Filters by extension; does not convert formats.</p></div>
+<div class="field"><label for="max_download_mb">Cloud download limit per book (MB)</label><input id="max_download_mb" type="number" min="1" max="16384" required></div>
+</section>
+<button id="advanced-toggle" type="button" class="optional-toggle" aria-expanded="false" aria-controls="advanced-fields">Advanced: proxy, certificates, tokens</button>
+<section id="advanced-fields" hidden>
 <div class="field"><label for="security_token">Temporary security token (optional, Alibaba Cloud / S3)</label><input id="security_token" type="password" autocomplete="new-password"><label><input id="clear_security_token" type="checkbox">Clear saved security token</label></div>
 <div class="field"><label for="socks5_proxy">SOCKS5 proxy (optional)</label><input id="socks5_proxy" type="password" autocomplete="new-password" autocapitalize="off" spellcheck="false"><label><input id="clear_socks5_proxy" type="checkbox">Clear proxy and connect directly</label><p class="note">e.g. socks5://192.168.1.10:1080 or socks5h://USER:PASSWORD@HOST:PORT. The proxy resolves destination names; URL-encode special characters. Saved proxies are never displayed; leave blank to keep. Applies only to object storage. No direct fallback if the proxy fails.</p></div>
 <div class="field"><label for="ca_bundle">Additional CA certificate path (optional)</label><input id="ca_bundle" placeholder="/mnt/us/extensions/inkpika/nas-ca.pem" autocapitalize="off" spellcheck="false"><p class="note">For a NAS with a private CA, copy the PEM CA certificate to Kindle and enter its absolute path. HTTPS still validates certificates and hostnames.</p></div>
+</section>
 <p class="note">Configuration is validated before saving. If the cloud library is running, it stops safely and restarts with the saved settings. Resume unfinished downloads manually.</p>
-<div class="actions"><button id="save" type="submit">Save and apply</button> <button id="reload" type="button">Reload</button></div>
-</form></div><script src="../../assets/i18n.js"></script><script src="../bridge.js"></script><script src="settings.js"></script></body></html>
+<p id="save-message" class="form-message" role="status" aria-live="polite"></p>
+<div class="actions save-actions"><button id="save" type="submit">Save and apply</button> <button id="reload" type="button">Reload</button></div>
+</form><footer class="app-footer"><span class="footer-brand">InkPika · 0.0.1.dev</span><span class="footer-build"><span>Built (UTC)</span>: <span>Not packaged (source run)</span></span></footer></div><script src="../../assets/i18n.js"></script><script src="../bridge.js"></script><script src="settings.js"></script></body></html>

@@ -1,1 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="758" height="1024" viewBox="0 0 758 1024" role="img" aria-label="InkPika cloud library illustration"><title>InkPika cloud library illustration</title><g font-family="Arial, sans-serif"><rect x="0" y="0" width="758" height="1024" rx="0" fill="#fff" stroke="#fff"/><text x="35" y="60" font-size="38" font-weight="700" fill="#111">InkPika</text><text x="35" y="105" font-size="27" font-weight="400" fill="#333">Cloud library · illustration</text><path d="M35 132H723" stroke="#333" stroke-width="2"/><text x="35" y="180" font-size="25" font-weight="600" fill="#111">Cloud library          Downloads</text><text x="35" y="238" font-size="22" font-weight="400" fill="#555">demo-library / sync/</text><rect x="35" y="280" width="688" height="120" rx="3" fill="#fafafa" stroke="#aaa"/><text x="55" y="325" font-size="25" font-weight="600" fill="#111">01_A short story.azw3</text><text x="55" y="368" font-size="20" font-weight="400" fill="#555">Sample book</text><rect x="554" y="338" width="145" height="42" rx="3" fill="#fff" stroke="#777"/><text x="576" y="367" font-size="20" font-weight="400" fill="#111">Download</text><rect x="35" y="428" width="688" height="120" rx="3" fill="#fafafa" stroke="#aaa"/><text x="55" y="473" font-size="25" font-weight="600" fill="#111">02_Reading notes.pdf</text><text x="55" y="516" font-size="20" font-weight="400" fill="#555">Sample book</text><rect x="554" y="486" width="145" height="42" rx="3" fill="#fff" stroke="#777"/><text x="576" y="515" font-size="20" font-weight="400" fill="#111">Download</text><rect x="35" y="576" width="688" height="120" rx="3" fill="#fafafa" stroke="#aaa"/><text x="55" y="621" font-size="25" font-weight="600" fill="#111">03_A new chapter.txt</text><text x="55" y="664" font-size="20" font-weight="400" fill="#555">Sample book</text><rect x="554" y="634" width="145" height="42" rx="3" fill="#fff" stroke="#777"/><text x="576" y="663" font-size="20" font-weight="400" fill="#111">Download</text><text x="35" y="834" font-size="25" font-weight="600" fill="#111">Wireless transfer · Cloud downloads</text><text x="35" y="882" font-size="22" font-weight="400" fill="#555">Illustration, not a device screenshot.</text><text x="35" y="928" font-size="22" font-weight="400" fill="#555">Device requirements: see compatibility records.</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="758" height="1024" viewBox="0 0 758 1024" role="img" aria-label="InkPika cloud library illustration"><title>InkPika cloud library illustration</title><rect width="758" height="1024" fill="#fff"/><g font-family="Arial, sans-serif" fill="#111">
+<text x="28" y="38" font-size="20" font-weight="400" fill="#111">Alibaba Cloud OSS · demo-library</text>
+<text x="563" y="38" font-size="20" font-weight="400" fill="#111">Free: 1.2 GB</text>
+<rect x="28" y="60" width="702" height="56" fill="#fff" stroke="#111" stroke-width="2"/><rect x="28" y="60" width="351" height="56" fill="#111"/>
+<text x="125" y="97" font-size="24" font-weight="700" fill="#fff">Cloud library</text>
+<text x="493" y="97" font-size="24" font-weight="700" fill="#111">Downloads  0</text>
+<text x="40" y="163" font-size="22" font-weight="700" fill="#111">↑ Up</text>
+<text x="205" y="163" font-size="22" font-weight="400" fill="#111">/ sync/</text>
+<text x="625" y="163" font-size="22" font-weight="700" fill="#111">Refresh</text>
+<path d="M28 184H730" stroke="#888"/>
+<text x="28" y="224" font-size="25" font-weight="700" fill="#111">01_A short story.azw3</text>
+<text x="28" y="263" font-size="20" font-weight="400" fill="#555">Sample book · 2.4 MB</text>
+<rect x="578" y="209" width="152" height="52" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="598" y="243" font-size="22" font-weight="700" fill="#111">Download</text>
+<path d="M28 296H730" stroke="#888"/>
+<text x="28" y="336" font-size="25" font-weight="700" fill="#111">02_Reading notes.pdf</text>
+<text x="28" y="375" font-size="20" font-weight="400" fill="#555">Sample book · 2.4 MB</text>
+<rect x="578" y="321" width="152" height="52" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="598" y="355" font-size="22" font-weight="700" fill="#111">Download</text>
+<path d="M28 408H730" stroke="#888"/>
+<text x="28" y="448" font-size="25" font-weight="700" fill="#111">03_A new chapter.txt</text>
+<text x="28" y="487" font-size="20" font-weight="400" fill="#555">Sample book · 2.4 MB</text>
+<rect x="578" y="433" width="152" height="52" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="598" y="467" font-size="22" font-weight="700" fill="#111">Download</text>
+<path d="M28 520H730" stroke="#888"/>
+<text x="28" y="560" font-size="25" font-weight="700" fill="#111">04_Field notes.azw3</text>
+<text x="28" y="599" font-size="20" font-weight="400" fill="#555">Sample book · 2.4 MB</text>
+<rect x="578" y="545" width="152" height="52" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="598" y="579" font-size="22" font-weight="700" fill="#111">Download</text>
+<path d="M28 632H730" stroke="#888"/>
+<path d="M28 669H730" stroke="#888"/>
+<text x="28" y="706" font-size="21" font-weight="700" fill="#111">InkPika · 0.0.1.dev</text>
+<text x="28" y="740" font-size="19" font-weight="400" fill="#555">Built (UTC): Not packaged (source run)</text>
+<text x="28" y="852" font-size="24" font-weight="700" fill="#111">Cloud library layout illustration</text>
+<text x="28" y="897" font-size="21" font-weight="400" fill="#555">Sample books and capacity; not a device screenshot.</text>
+<text x="28" y="939" font-size="21" font-weight="400" fill="#555">Device requirements: see compatibility records.</text>
+</g></svg>

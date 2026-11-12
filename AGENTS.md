@@ -141,8 +141,9 @@ consistent with the code. InkPika is in development: keep the package version fi
 `0.0.1.dev` in `internal/buildinfo/VERSION` until a release version is explicitly authorized.
 The package is `inkpika-0.0.1.dev-armv5.zip` plus its checksum. Derive package metadata
 from that version source; do not bump it for ordinary development changes.
-Embed the same UTC package time in the executable and `build.json`. On the device's
-configuration information page, show version and package time as the final two rows.
+Embed the same UTC package time in the executable and `build.json`. Show InkPika, version and UTC build time in a compact footer on every web page,
+including unpaired LAN pages; do not repeat them in configuration tables.
+Use compact task navigation and prioritize content/actions over repeated headings.
 Keep configuration information and manual connection tests in Settings; the cloud
 library page contains browsing and downloads. Pairing and editing stay in their
 separate authenticated settings service; transfer must never expose configuration.

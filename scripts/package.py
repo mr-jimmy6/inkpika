@@ -20,9 +20,9 @@ FILES = (
     "docs/OBJECT_STORAGE.md", "docs/OBJECT_STORAGE_ZH.md",
     "docs/LICENSE-go.txt", "docs/LICENSE-apache-2.0.txt",
     "docs/LICENSE-mpl-2.0.txt", "docs/DEVICE_VALIDATION.md", "docs/DEVICE_COMPATIBILITY.md", "docs/DEVELOPMENT.md", "docs/COMPATIBILITY.md", "docs/LOCALIZATION.md",
-    "docs/LICENSE-qrcode.txt", "docs/LICENSE-gofakes3.txt", "docs/KUAL_NAVIGATION.md", "docs/images/feature-overview.svg",
-    "docs/images/feature-overview-en.svg",
-    "docs/images/best-practices.svg", "docs/images/best-practices-en.svg",
+    "docs/LICENSE-qrcode.txt", "docs/LICENSE-gofakes3.txt", "docs/KUAL_NAVIGATION.md", "docs/images/feature-overview-zh.png",
+    "docs/images/feature-overview-en.png",
+    "docs/images/best-practices-zh.png", "docs/images/best-practices-en.png",
 ) + tuple(EXTENSION + name for name in (
     "config.xml", "menu.json", "config.example.json", "config.aliyun.example.json",
     "config.qingstor.example.json", "config.s3.example.json", "config.azure.example.json", "start.sh", "stop.sh", "service.sh", "sync.sh", "menu.sh",

@@ -2,7 +2,11 @@
   'use strict';
   var token = '', revision = '', fields = ['language', 'bucket', 'region', 'endpoint', 'prefix', 'download_dir', 'max_download_mb', 'ca_bundle'];
   function el(id) { return document.getElementById(id); }
-  function message(text) { el('message').textContent = text; }
+  function message(text, atTop) {
+    var editing = !el('configuration').hidden && !atTop;
+    el('message').textContent = editing ? '' : text;
+    el('save-message').textContent = editing ? text : '';
+  }
   function s3Preset() { var platform = el('provider').value; return platform.indexOf('s3:') === 0 ? platform.slice(3) : ''; }
   function providerHelp(reset) {
     var preset = s3Preset(), s3 = !!preset, azure = el('provider').value === 'azure_blob';
@@ -56,8 +60,6 @@
       el('save').disabled = false;
       if (err) { message(err); return; }
       I18n.setLanguage(data.effective_language);
-      el('build-version').textContent = data.version;
-      el('build-time').textContent = data.packaged_at || I18n.t("Not packaged (source run)");
       revision = data.revision; fields.forEach(function (id) { el(id).value = data[id] || ''; });
       el('provider').value = data.provider === 's3' ? 's3:' + (data.s3_preset || 'custom') : data.provider;
       el('s3_addressing').value = data.s3_addressing || '';
@@ -88,9 +90,14 @@
     el('save-language').disabled = true;
     api('POST', '/api/config', {revision: revision, language: el('language').value, language_only: true}, function (err, data) {
       el('save-language').disabled = false;
-      if (err) { message(err); return; }
-      load(function () { message(data.message); });
+      if (err) { message(err, true); return; }
+      load(function () { message(data.message, true); });
     });
+  };
+  el('advanced-toggle').onclick = function () {
+    var open = el('advanced-fields').hidden;
+    el('advanced-fields').hidden = !open;
+    el('advanced-toggle').setAttribute('aria-expanded', open ? 'true' : 'false');
   };
   el('pair').onsubmit = connect;
   el('reload').onclick = function () { load(); };

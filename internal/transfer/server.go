@@ -20,6 +20,7 @@ import (
 	"time"
 
 	"github.com/mr-jimmy6/inkpika/internal/bookformat"
+	"github.com/mr-jimmy6/inkpika/internal/buildinfo"
 	"github.com/mr-jimmy6/inkpika/internal/download"
 	"github.com/mr-jimmy6/inkpika/internal/i18n"
 	qrcode "github.com/skip2/go-qrcode"
@@ -161,7 +162,7 @@ func (s *Server) asset(w http.ResponseWriter, r *http.Request, local bool) {
 		return
 	}
 	if strings.HasSuffix(name, ".html") {
-		b = i18n.HTML(b, w.Header().Get("Content-Language"))
+		b = i18n.HTML(buildinfo.HTML(b), w.Header().Get("Content-Language"))
 	}
 	w.Header().Set("Content-Type", typ)
 	_, _ = w.Write(b)

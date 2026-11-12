@@ -411,7 +411,7 @@
   "Requires jailbreak and KUAL · In development": "需要越狱和 KUAL · 开发中",
   "InkPika includes OSS, QingStor, S3 and Azure Blob adapters, SOCKS5 and additional CA support. Feature and device test results are maintained in the validation record. See": "InkPika 支持 OSS、QingStor、S3、Azure Blob、SOCKS5 和附加 CA。功能与设备测试结果统一维护在验证记录中。详见",
   "InkPika targets Kindle devices across generations. Review the requirements, implemented measures and remaining work for your model before installation.": "InkPika 面向各代 Kindle。安装前请查看对应机型的要求、已有兼容措施和待办。",
-  "Development version: 0.0.1.dev. Package: inkpika-0.0.1.dev-armv5.zip and its .zip.sha256. Configuration pages show the version and UTC package time.": "开发版本：0.0.1.dev。安装包为 inkpika-0.0.1.dev-armv5.zip 及对应 .zip.sha256。配置页显示版本与 UTC 打包时间。",
+  "Development version: 0.0.1.dev. Package: inkpika-0.0.1.dev-armv5.zip and its .zip.sha256. Every web page shows the version and UTC build time in its footer.": "开发版本：0.0.1.dev。安装包为 inkpika-0.0.1.dev-armv5.zip 及对应 .zip.sha256。每个网页的页脚显示版本与 UTC 构建时间。",
   "InkPika targets Kindle devices across generations and requires jailbreak and KUAL. PW2 / firmware 5.12.2.2 is the engineering baseline. For device requirements, implemented measures and remaining work, see the": "InkPika 面向各代 Kindle，需要越狱和 KUAL，以 PW2 / 固件 5.12.2.2 为工程基线。设备要求、已有兼容措施和待办见",
   "InkPika is free under the MIT license. Object storage may incur storage, request and traffic fees. Feature and device test results are maintained separately. See the": "InkPika 采用 MIT 许可证，可免费使用。对象存储可能产生存储、请求与流量费用。功能与设备测试结果单独维护，详见",
   "Implementation and test records:": "实现与测试记录：",

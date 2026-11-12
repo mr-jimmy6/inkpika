@@ -1,19 +1,24 @@
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#000;font-family:"Amazon Ember","STHeiti","Heiti SC",Arial,sans-serif;font-size:22px;line-height:1.45;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:#000;font-family:"Amazon Ember","STHeiti","Heiti SC",Arial,sans-serif;font-size:20px;line-height:1.4;-webkit-text-size-adjust:100%}
 [hidden]{display:none!important}
-.page{max-width:820px;margin:0 auto;padding:20px}
-h1{font-size:28px;line-height:1.4;margin:0 0 12px}p{margin:12px 0;word-wrap:break-word}
-button,.pick{font:inherit;font-weight:bold;border:2px solid #000;border-radius:0;color:#000;background:#fff;min-height:54px;padding:8px 12px;cursor:pointer}
-button:disabled{color:#555;border-color:#888;cursor:default}button:active{background:#000;color:#fff}
-input,select{font:inherit;max-width:100%;border:2px solid #000;padding:8px;background:#fff;color:#000;border-radius:0}
-.heading{display:table;width:100%;border-bottom:2px solid #000;padding-bottom:12px}.heading h1{display:table-cell;vertical-align:middle}.heading button{float:right;font-size:20px}
-dl{margin:12px 0;border-top:1px solid #000}dt{font-size:20px;font-weight:bold;margin-top:10px}dd{margin:0 0 10px;word-wrap:break-word}.endpoint{font-size:25px;font-weight:bold}
-.connect-guide{display:table;width:100%;table-layout:fixed;border-top:1px solid #000;border-bottom:1px solid #000}.qr{display:table-cell;width:320px;vertical-align:middle}.qr img{display:block}.guide{display:table-cell;vertical-align:middle;padding-left:12px;font-size:20px}
-.code{font-size:30px;letter-spacing:5px;font-weight:bold}.note{font-size:20px}.pair-row{margin-top:12px}.pair-row input{width:180px;letter-spacing:4px}.pick{display:inline-block;margin-bottom:10px}.actions{margin:16px 0}.book{border-top:1px solid #000;padding:10px 0}.name{font-weight:bold;font-size:24px}#message{font-weight:bold}#files{display:block;font-size:18px;width:100%}
-@media(max-width:560px){body{font-size:18px}.page{padding:16px}.note,.guide{font-size:18px}.connect-guide,.qr,.guide{display:block;width:100%}.guide{padding-left:0}.qr img{margin:0 auto}.endpoint{font-size:22px}.name{font-size:21px}}
-
-.field{margin:20px 0}.field>label{display:block;font-weight:bold;margin-bottom:6px}.field>input,.field>select{width:100%}.field input[type=checkbox],.book input[type=checkbox]{width:auto;margin-right:12px}.selected{background:#000;color:#fff}#download-link{display:block;color:#000;border:2px solid #000;padding:12px;font-weight:bold}.book label{display:block;word-wrap:break-word}
-
-/* Preserve readable labels and QR sizing on narrow companion browsers. */
-.qr img{max-width:100%;height:auto}
-@media(max-width:560px){.heading h1{display:block}.heading button{float:none;margin-top:8px}.heading{display:block}}
+.page{max-width:820px;margin:0 auto;padding:12px 18px}
+h1{font-size:26px;line-height:1.3;margin:0 0 14px}h2{font-size:22px;margin:0 0 12px}p{margin:8px 0;word-wrap:break-word}
+p:empty{display:none}
+button,.pick{font:inherit;font-weight:bold;border:2px solid #000;border-radius:0;color:#000;background:#fff;min-height:48px;padding:7px 12px;cursor:pointer}
+button:disabled{color:#555;border-color:#888;cursor:default}button:active,.selected{background:#000;color:#fff}
+button:focus,input:focus,select:focus{outline:2px solid #000;outline-offset:2px}
+input,select{font:inherit;max-width:100%;min-height:48px;border:2px solid #000;padding:7px 10px;background:#fff;color:#000;border-radius:0}
+.heading{display:table;width:100%;border-bottom:2px solid #000;padding-bottom:10px;margin-bottom:10px}.heading h1{display:table-cell;vertical-align:middle}.heading button{float:right;font-size:18px}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.connection-state{font-size:18px;margin:10px 0}.connection-network{font-size:18px;margin:8px 0 12px;word-wrap:break-word}
+.connect-guide{display:table;width:100%;table-layout:fixed;border-top:1px solid #777;border-bottom:1px solid #777;padding:14px 0}.qr{display:table-cell;width:280px;vertical-align:middle;text-align:center}.qr img{display:block;width:260px;max-width:100%;height:auto;margin:0 auto}.guide{display:table-cell;vertical-align:middle;padding-left:18px;font-size:20px}.guide-title{font-weight:bold}.endpoint{font-size:22px;font-weight:bold;word-wrap:break-word}.code-label{font-size:18px;margin:20px 0 0}.code{font-size:32px;letter-spacing:5px;font-weight:bold;margin:4px 0}
+.note{font-size:18px;line-height:1.5}.service-help{margin-top:12px}.pair-row{margin:10px 0}.pair-row input{width:180px}#code{letter-spacing:4px}#search{letter-spacing:normal}.pair-row button{margin-left:8px}
+#pair{border:1px solid #777;padding:14px;margin:12px 0}.pick{display:inline-block;margin-bottom:10px}.actions{margin:12px 0}.actions button{margin:0 6px 8px 0}.book{border-top:1px solid #777;padding:10px 0}.name{font-weight:bold;font-size:22px}#message,.form-message{font-weight:bold;font-size:18px}#files{display:block;font-size:18px;width:100%;margin:8px 0}
+.transfer-tabs{display:table;width:100%;margin:12px 0;border:2px solid #000}.transfer-tabs button{display:table-cell;width:50%;border:0;vertical-align:middle;font-size:20px}
+.field{margin:12px 0}.field>label{display:block;font-weight:bold;margin-bottom:5px}.field>input,.field>select{width:100%}.field input[type=checkbox],.book input[type=checkbox]{width:22px;height:22px;min-height:0;margin-right:10px;vertical-align:middle}
+.field-group{margin:18px 0;padding-top:14px;border-top:1px solid #777}.field-grid{overflow:hidden}.field-grid>.field{float:left;width:50%;padding-right:10px}.field-grid>.field+ .field{padding-left:10px;padding-right:0}
+.language-field select{width:auto;max-width:60%;margin-right:8px}.language-field button{font-size:18px}.optional-toggle{width:100%;text-align:left;margin-top:12px}.optional-toggle:after{content:"+";float:right;margin-left:10px}.optional-toggle[aria-expanded="true"]:after{content:"−"}.optional-toggle[aria-expanded="true"]{background:#000;color:#fff}
+.save-actions{border-top:2px solid #000;padding-top:14px}.save-actions #save{background:#000;color:#fff}
+#download-link{display:block;color:#000;border:2px solid #000;padding:12px;font-weight:bold}.book label{display:block;min-height:44px;word-wrap:break-word}
+.app-footer{border-top:1px solid #777;margin-top:20px;padding-top:10px;font-size:16px;line-height:1.6;word-wrap:break-word}.footer-brand{display:inline-block;font-weight:bold;margin-right:16px}.footer-build{display:inline-block}
+@media(max-width:560px){body{font-size:18px}.page{padding:12px}.note,.guide{font-size:16px}h1{font-size:24px}h2{font-size:20px}.connect-guide,.qr,.guide{display:block;width:100%}.guide{padding-left:0;padding-top:10px}.endpoint{font-size:20px}.name{font-size:20px}.field-grid>.field,.field-grid>.field+ .field{float:none;width:100%;padding:0}.pair-row input{width:155px}.pair-row button{margin-left:4px}.transfer-tabs button{font-size:17px;padding:8px 4px;height:64px}.footer-build{display:block}.language-field select{max-width:100%}.language-field button{margin-top:8px}.app-footer{font-size:14px}}

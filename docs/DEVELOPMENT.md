@@ -65,9 +65,9 @@ flowchart TD
 
 `menu.sh refresh` 使用 `-menu-action refresh` 读取配置与已保存状态，不启动后台。菜单写入者使用 `menu.json.lock` 串行生成，并在持锁后读取最新状态，避免服务状态与同步进度互相覆盖。服务启停后重建菜单；KUAL 原生 `if` 表达式在刷新时检查固定 PID 的 `/proc/PID/cmdline`，避免异常退出或重启后仍显示停止按钮。
 
-云端书架保留兼容用的本机 `GET /api/config` 返回当前 `version`、UTC `packaged_at` 与明确白名单：provider、bucket、download_dir、同步范围，以及服务端已脱敏的 AccessKey ID / Secret。密钥只保留首尾各 2 个字符，不足 5 个字符全部隐藏；完整凭据与 SecurityToken 不进入浏览器。该页展示后台当前加载的配置，手工修改文件后需重启后台。
+云端书架保留兼容用的本机 `GET /api/config` 返回当前 `version`、UTC `packaged_at` 与明确白名单：provider、bucket、download_dir、同步范围，以及服务端已脱敏的 AccessKey ID / Secret。密钥只保留首尾各 2 个字符，不足 5 个字符全部隐藏；完整凭据与 SecurityToken 不进入浏览器。该兼容接口返回后台当前加载的配置；配置设置页面展示磁盘中已保存的配置，手工修改文件后需重启云端后台。
 
-`POST /api/connection-check` 显式发起测试，`GET` 只读取上次结果。`internal/diagnostics.Run` 与保留兼容的 `menu.sh check` CLI 共用 `connection-check.lock`，并发请求返回 409；使用请求上下文和 35 秒总时限。先用无凭据 HEAD 验证 DNS/TCP/TLS，再签名列举当前 prefix，最多找 32 页以抽样读取一个对象的 1 字节，立即关闭响应，不创建图书或下载任务。结果脱敏保存至当前来源的 `connection-check.json`；读取按锁状态识别中断、排除其他来源，API 不返回内部 source 标识。空范围、分页循环、未找到样本都不能宣称文件读取成功。前端显示时间、三个阶段及完整错误，只有用户点击才发起测试，不自动轮询。KUAL 的“配置设置 [web]”默认显示已保存的配置、脱敏密钥、版本和打包时间，以及手动连通性测试。“手机 / 电脑”页签显示独立配对入口。云端书架仅保留书库和下载页签。配置设置的回环 GET /api/config 复用编辑器的字段白名单，GET / POST /api/connection-check 使用磁盘中的已保存配置和同一诊断锁；无需启动云端书架服务。缺少有效云端配置时仍可查看与配对，测试明确提示先完成配置。
+`POST /api/connection-check` 显式发起测试，`GET` 只读取上次结果。`internal/diagnostics.Run` 与保留兼容的 `menu.sh check` CLI 共用 `connection-check.lock`，并发请求返回 409；使用请求上下文和 35 秒总时限。先用无凭据 HEAD 验证 DNS/TCP/TLS，再签名列举当前 prefix，最多找 32 页以抽样读取一个对象的 1 字节，立即关闭响应，不创建图书或下载任务。结果脱敏保存至当前来源的 `connection-check.json`；读取按锁状态识别中断、排除其他来源，API 不返回内部 source 标识。空范围、分页循环、未找到样本都不能宣称文件读取成功。前端显示时间、三个阶段及完整错误，只有用户点击才发起测试，不自动轮询。KUAL 的“配置设置 [web]”默认显示已保存的配置、脱敏密钥，以及手动连通性测试。所有网页（含未配对的手机／电脑页）在页脚统一显示 InkPika、版本和 UTC 构建时间，配置表不再重复展示；源码直接运行时标明未打包。顶部仅保留任务导航与刷新；连接页并排展示扫码入口与电脑连接信息，窄屏自动堆叠。手机配置表单分组显示云端存储、图书与下载，高级代理／证书／令牌字段默认折叠。“手机 / 电脑”页签显示独立配对入口。云端书架仅保留书库和下载页签。配置设置的回环 GET /api/config 复用编辑器的字段白名单，GET / POST /api/connection-check 使用磁盘中的已保存配置和同一诊断锁；无需启动云端书架服务。缺少有效云端配置时仍可查看与配对，测试明确提示先完成配置。
 
 
 API 认证头为 `X-InkPika-Token`。服务接受配置的回环 Host 或等价 `localhost`，POST 的 Origin 若存在必须匹配当前 Host。JSON 请求限制 16 KiB，拒绝多对象和未知字段。无参数的 `/api/jobs/clear` 也需提交 `{}`，同步接口可用空请求体。完整凭据不返回给前端。错误统一返回 `{"error":"说明"}`。

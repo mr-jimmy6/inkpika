@@ -25,7 +25,7 @@
     var box = el('check-result'); box.innerHTML = '';
     el('start-check').disabled = result.running || checkBusy;
     text(el('start-check'), result.running || checkBusy ? I18n.t("Testing…") : I18n.t("Start test"));
-    if (result.running) { text(el('check-message'), I18n.t("Test in progress; use Refresh info shortly to see the results.")); return; }
+    if (result.running) { text(el('check-message'), I18n.t("Test in progress; select Refresh shortly to see the results.")); return; }
     if (!result.updated) { text(el('check-message'), I18n.t("Not tested yet. Select Start test to check connectivity and access permissions.")); return; }
     text(el('check-message'), I18n.t("Last test: ") + result.updated_local);
     var stages = make('div', 'check-stages');
@@ -52,7 +52,7 @@
       el('refresh-config').disabled = false;
       text(el('config-message'), err || '');
       if (err) { return; }
-      var fields = [[I18n.t("Storage platform"), info.provider_label || info.provider], ['bucket', info.bucket], [I18n.t("Connection"), (info.socks5_proxy_set ? I18n.t("SOCKS5 (configured)") : I18n.t("Direct"))], ['download_dir', info.download_dir], [I18n.t("Sync scope"), info.sync_prefix], [I18n.t("Allowed formats"), (info.ebook_formats && info.ebook_formats.length ? info.ebook_formats : info.default_formats).join(", ").toUpperCase()], ['AccessKey ID', I18n.t(info.access_key_id_masked)], ['AccessKey Secret', I18n.t(info.secret_access_key_masked)], [I18n.t("Version"), info.version], [I18n.t("Packaged at (UTC)"), info.packaged_at || I18n.t("Not packaged (source run)")]];
+      var fields = [[I18n.t("Storage platform"), info.provider_label || info.provider], [info.provider === 'azure_blob' ? I18n.t("Container") : I18n.t("Bucket"), info.bucket], [I18n.t("Connection"), (info.socks5_proxy_set ? I18n.t("SOCKS5 (configured)") : I18n.t("Direct"))], [I18n.t("Save folder"), info.download_dir], [I18n.t("Sync scope"), info.sync_prefix], [I18n.t("Allowed formats"), (info.ebook_formats && info.ebook_formats.length ? info.ebook_formats : info.default_formats).join(", ").toUpperCase()], ['AccessKey ID', I18n.t(info.access_key_id_masked)], ['AccessKey Secret', I18n.t(info.secret_access_key_masked)]];
       var table = el('config-fields'), body = make('tbody'), i, row;
       table.innerHTML = '';
       for (i = 0; i < fields.length; i++) {
@@ -75,6 +75,9 @@
     });
   }
   function tab(pairing) {
+    el('refresh-config').hidden = pairing; el('refresh').hidden = !pairing;
+    el('configuration-tab').setAttribute('aria-pressed', pairing ? 'false' : 'true');
+    el('pairing-tab').setAttribute('aria-pressed', pairing ? 'true' : 'false');
     el('configuration').hidden = pairing; el('pairing').hidden = !pairing;
     el('configuration-tab').className = pairing ? '' : 'selected';
     el('pairing-tab').className = pairing ? 'selected' : '';
