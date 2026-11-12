@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:kindle="http://kindle.amazon.com/ns/widget-extensions" id="com.inkpika.app" version="@VERSION@" viewmodes="application">
+  <name>InkPika</name>
+  <content src="index.html" />
+  <kindle:permissions><kindle:permission name="local-port-access" /></kindle:permissions>
+  <kindle:network>
+    <kindle:asset key="overrideProxy" value="none" />
+    <kindle:asset key="enableCaching" value="false" />
+  </kindle:network>
+  <kindle:cookiejar>
+    <kindle:asset key="persistent" value="false" />
+    <kindle:asset key="useDeviceCookies" value="false" />
+  </kindle:cookiejar>
+  <kindle:chrome><kindle:asset key="configureSearchBar" value="system" /></kindle:chrome>
+  <kindle:gestures><kindle:param name="tap" value="yes" /><kindle:param name="drag" value="yes" /></kindle:gestures>
+  <feature name="http://kindle.amazon.com/apis" required="true"><param name="appmgr" value="yes" /><param name="chrome" value="yes" /></feature>
+  <kindle:settings><kindle:setting name="saveContext" value="no" /></kindle:settings>
+</widget>

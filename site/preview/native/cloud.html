@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud library · InkPika</title>
+  <link rel="stylesheet" href="cloud.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'"><link rel="icon" href="../../assets/favicon.svg"><link rel="stylesheet" href="../native-fit.css"></head>
+<body data-demo-screen="cloud">
+  <div class="page">
+    <p class="meta">InkPika</p>
+    <div class="storage"><span id="bucket">Connecting to local service…</span> <button id="about-toggle" aria-label="About the cloud library" aria-expanded="false" aria-controls="about-text">About</button><span id="space"></span></div>
+    <p id="about-text" class="meta about" hidden>Browse ebooks in object storage and download them to read locally on Kindle.</p>
+    <nav class="tabs"><button id="library-tab" class="selected">Cloud library</button><button id="downloads-tab">Downloads <span id="count">0</span></button></nav>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <section id="library">
+      <div class="toolbar library-toolbar"><div class="up-cell"><button id="up" class="small">↑ Up</button></div><div id="path" class="path">/</div><div class="refresh-cell"><button id="refresh" class="small">Refresh</button></div></div>
+      <div id="files" aria-live="polite"><p class="empty">Loading library…</p></div>
+      <div id="pagination" class="pagination" hidden><button id="prev" class="small" disabled>Previous</button><span id="page">Page 1</span><button id="next" class="small" disabled>Next</button></div>
+    </section>
+    <section id="downloads" hidden>
+      <div class="toolbar"><strong>Download to device</strong><button id="refresh-jobs" class="small right">Refresh progress</button></div>
+      <div id="jobs" aria-live="polite"></div>
+      <button id="clear" class="small">Clear finished entries (keep books)</button>
+    </section>
+
+  </div>
+  <script src="../../assets/i18n.js"></script><script src="../bridge.js"></script><script src="cloud.js"></script>
+</body>
+</html>

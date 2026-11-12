@@ -1,0 +1,7 @@
+{
+  "port": 8789,
+  "ui_port": 8790,
+  "download_dir": "/mnt/us/documents/InkPika/Wireless",
+  "max_upload_mb": 512,
+  "library_dir": "/mnt/us/documents"
+}

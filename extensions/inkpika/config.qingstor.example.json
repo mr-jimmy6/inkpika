@@ -1,0 +1,14 @@
+{
+  "language": "auto",
+  "provider": "qingstor",
+  "bucket": "your-bucket",
+  "region": "pek3b",
+  "endpoint": "",
+  "access_key_id": "YOUR_ACCESS_KEY_ID",
+  "secret_access_key": "YOUR_SECRET_ACCESS_KEY",
+  "prefix": "",
+  "listen": "127.0.0.1:8787",
+  "download_dir": "/mnt/us/documents/InkPika",
+  "max_download_mb": 512,
+  "ebook_formats": []
+}

@@ -1,0 +1,16 @@
+{
+  "language": "auto",
+  "provider": "azure_blob",
+  "bucket": "your-container",
+  "region": "",
+  "endpoint": "",
+  "access_key_id": "YOUR_STORAGE_ACCOUNT_NAME",
+  "secret_access_key": "YOUR_BASE64_ACCOUNT_KEY",
+  "socks5_proxy": "",
+  "ca_bundle": "",
+  "prefix": "",
+  "listen": "127.0.0.1:8787",
+  "download_dir": "/mnt/us/documents/InkPika",
+  "max_download_mb": 512,
+  "ebook_formats": []
+}

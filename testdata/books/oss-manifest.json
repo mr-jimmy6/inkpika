@@ -1,0 +1,20 @@
+[
+  {
+    "key": "kindle-client-tests/2026-11-06/01_中文排版测试.azw3",
+    "name": "01_中文排版测试.azw3",
+    "bytes": 13697,
+    "sha256": "e8e5e1b66a43bb62e4501f19b9def5bbca32395ff606bbcf38c58ddba71bccd8"
+  },
+  {
+    "key": "kindle-client-tests/2026-11-06/02_English + 空格测试.azw3",
+    "name": "02_English + 空格测试.azw3",
+    "bytes": 13001,
+    "sha256": "dd1482b035ebd350466e39792bf18660d6e388f2047512c86b28909b6f9758a2"
+  },
+  {
+    "key": "kindle-client-tests/2026-11-06/03_目录与列表测试.azw3",
+    "name": "03_目录与列表测试.azw3",
+    "bytes": 13240,
+    "sha256": "032e37eefd20e516dd7d41af182fefcdf586553d713c03458465bf2de658a2bf"
+  }
+]

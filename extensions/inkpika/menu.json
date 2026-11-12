@@ -1,0 +1,162 @@
+{
+  "items": [
+    {
+      "name": "InkPika",
+      "items": [
+        {
+          "name": "All books · Not checked yet",
+          "items": [
+            {
+              "name": "Refresh status to load all books",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            }
+          ],
+          "exitmenu": false,
+          "status": false
+        },
+        {
+          "name": "Start sync",
+          "action": "./sync.sh",
+          "params": "start",
+          "exitmenu": false,
+          "refresh": true,
+          "status": false,
+          "internal": "status Submitted. Refresh status for results."
+        },
+        {
+          "name": "View status",
+          "items": [
+            {
+              "name": "Refresh status",
+              "action": "./sync.sh",
+              "params": "refresh",
+              "exitmenu": false,
+              "refresh": true,
+              "status": false,
+              "internal": "status Submitted. Refresh status for results."
+            },
+            {
+              "name": "Status: Ready",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            },
+            {
+              "name": "Total 0 Saved 0 Pending 0",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            },
+            {
+              "name": "Checked: Unknown time",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            },
+            {
+              "name": "Downloaded 0 · Skipped 0",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            },
+            {
+              "name": "Cached results; refresh to verify",
+              "action": ":",
+              "exitmenu": false,
+              "status": false
+            },
+            {
+              "name": "Status codes",
+              "items": [
+                {
+                  "name": "OK = Downloaded; version matches",
+                  "action": ":",
+                  "exitmenu": false,
+                  "status": false
+                },
+                {
+                  "name": "NEW = Not downloaded",
+                  "action": ":",
+                  "exitmenu": false,
+                  "status": false
+                },
+                {
+                  "name": "UPD = Update or verification pending",
+                  "action": ":",
+                  "exitmenu": false,
+                  "status": false
+                },
+                {
+                  "name": "ERR = Check or download failed",
+                  "action": ":",
+                  "exitmenu": false,
+                  "status": false
+                },
+                {
+                  "name": "DL = Downloading",
+                  "action": ":",
+                  "exitmenu": false,
+                  "status": false
+                }
+              ],
+              "exitmenu": false,
+              "status": false
+            }
+          ],
+          "exitmenu": false,
+          "status": false
+        },
+        {
+          "name": "Cloud library [web]",
+          "action": "./start.sh",
+          "exitmenu": true,
+          "status": false
+        },
+        {
+          "name": "Wireless transfer [web]",
+          "action": "./transfer-start.sh",
+          "exitmenu": true,
+          "status": false
+        },
+        {
+          "name": "Settings [web]",
+          "action": "./settings-start.sh",
+          "exitmenu": true,
+          "status": false
+        },
+        {
+          "name": "Background services",
+          "items": [
+            {
+              "name": "Start cloud library",
+              "action": "./service.sh",
+              "exitmenu": false,
+              "refresh": true,
+              "status": false
+            },
+            {
+              "name": "Start wireless transfer",
+              "action": "./transfer-service.sh",
+              "exitmenu": false,
+              "refresh": true,
+              "status": false
+            },
+            {
+              "name": "Start settings",
+              "action": "./settings-service.sh",
+              "exitmenu": false,
+              "refresh": true,
+              "status": false
+            }
+          ],
+          "exitmenu": false,
+          "status": false
+        }
+      ],
+      "exitmenu": false,
+      "status": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+# Local credentials and private device files
+/local/
+/auth/
+/.ssh/
+/config.json
+/extensions/*/config.json
+/extensions/*/transfer.json
+/extensions/*/transfer-state/
+/extensions/*/settings-state/
+/extensions/*/config.json.previous
+/extensions/*/config.json.lock
+/extensions/*/.config-validate-*
+/extensions/*/ui/service
+.env
+.env.*
+!.env.example
+[Aa]ccess[Kk]ey*.csv
+[Kk]indleKey
+*.key
+*.p12
+*.pfx
+*.pem
+!/internal/cloudhttp/cacert.pem
+
+# Runtime state and session tokens
+/extensions/*/state/
+/extensions/*/ui/launch.js*
+/extensions/*/menu.json.lock
+launch.url
+*.log
+
+# Build and verification output (keep the small test books in testdata/)
+/dist/
+/bin/
+/extensions/*/bin/
+/inkpika
+/output/
+/.playwright-cli/
+*.test
+coverage*.out
+
+# Local editor and macOS files
+.DS_Store
+._*
+/.idea/
+/.vscode/
+
+# Python packaging checks
+__pycache__/
+*.pyc

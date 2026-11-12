@@ -1,0 +1,15 @@
+{
+  "language": "auto",
+  "provider": "aliyun_oss",
+  "bucket": "your-bucket",
+  "region": "cn-hangzhou",
+  "endpoint": "",
+  "access_key_id": "YOUR_ACCESS_KEY_ID",
+  "secret_access_key": "YOUR_ACCESS_KEY_SECRET",
+  "security_token": "",
+  "prefix": "",
+  "listen": "127.0.0.1:8787",
+  "download_dir": "/mnt/us/documents/InkPika",
+  "max_download_mb": 512,
+  "ebook_formats": []
+}

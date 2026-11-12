@@ -1,0 +1,12 @@
+h1{margin-bottom:12px}
+.tabs{display:table;width:100%;border:2px solid #000;margin:12px 0}
+.tabs button{display:table-cell;width:50%;border:0;min-height:60px}
+.toolbar{overflow:hidden;margin:12px 0;line-height:54px}.toolbar strong{font-size:24px}
+.small{font-size:20px}.right{float:right}.meta,.job-error{font-size:20px;word-wrap:break-word}
+.config-fields{width:100%;border-collapse:collapse;table-layout:fixed;font-size:20px;line-height:1.5}
+.config-fields th,.config-fields td{padding:7px 0;border-bottom:1px solid #000;text-align:left;vertical-align:top;word-wrap:break-word}
+.config-fields th{width:200px;padding-right:14px;font-weight:bold}
+.config-note{margin:10px 0 14px}
+.check-toolbar{border-top:2px solid #000;padding-top:10px}
+.check-stages{margin:8px 0;line-height:1.5;font-size:22px;font-weight:bold}
+@media(max-width:520px){.config-fields th{width:125px;padding-right:10px}.tabs button{font-size:18px}}

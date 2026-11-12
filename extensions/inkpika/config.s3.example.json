@@ -1,0 +1,19 @@
+{
+  "language": "auto",
+  "provider": "s3",
+  "s3_preset": "aws",
+  "s3_addressing": "",
+  "bucket": "your-bucket",
+  "region": "us-east-1",
+  "endpoint": "",
+  "access_key_id": "YOUR_ACCESS_KEY_ID",
+  "secret_access_key": "YOUR_SECRET_ACCESS_KEY",
+  "security_token": "",
+  "socks5_proxy": "",
+  "ca_bundle": "",
+  "prefix": "",
+  "listen": "127.0.0.1:8787",
+  "download_dir": "/mnt/us/documents/InkPika",
+  "max_download_mb": 512,
+  "ebook_formats": []
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wireless transfer · InkPika</title><link rel="stylesheet" href="/style.css"></head>
+<body><div class="page"><p class="note">InkPika</p><h1>Wireless transfer</h1>
+<p>Transfer ebooks between a phone or computer and Kindle.</p>
+<form id="pair"><label for="code">Six-digit connection code shown on Kindle</label><div class="pair-row"><input id="code" type="tel" inputmode="numeric" autocomplete="off" maxlength="6" pattern="[0-9]{6}" required><button id="connect" type="submit">Connect</button></div></form>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="upload" hidden>
+<nav class="actions"><button id="upload-tab" class="selected">Send to Kindle</button> <button id="download-tab">Download from Kindle</button></nav>
+<section id="upload-panel">
+<p id="space"></p>
+<p id="formats" class="note"></p>
+<p class="note">Formats are checked by extension. An allowed upload may still require conversion for the native reader. Duplicate names are saved separately; existing books are never overwritten.</p>
+<label for="files">Choose books (multiple allowed)</label><input id="files" type="file" multiple>
+<div class="actions"><button id="send" disabled>Start upload</button> <button id="cancel" hidden>Cancel upload</button></div>
+<div id="queue" aria-live="polite"></div>
+<p class="note">Keep this page open and Kindle awake during upload.</p>
+</section>
+<section id="download-panel" hidden>
+<form id="search-form"><label for="search">Search local book filenames</label><div class="pair-row"><input id="search" type="search" placeholder="Enter filename"><button type="submit">Search</button> <button id="refresh-books" type="button">Refresh</button></div></form>
+<p class="note">Includes all local Kindle books in allowed formats. Multiple books download as ZIP; a single book keeps its original file.</p>
+<div class="actions"><button id="select-page">Select this page</button> <button id="clear-selection">Clear selection</button> <button id="export" disabled>Download selected: 0 books</button></div>
+<p id="download-message" role="status"></p><a id="download-link" hidden>Save to computer or phone</a>
+<div id="books"></div><div class="actions"><button id="previous">Previous</button> <span id="page-count"></span> <button id="next">Next</button></div>
+</section>
+</section></div><script src="/i18n.js"></script><script src="/app.js"></script></body></html>

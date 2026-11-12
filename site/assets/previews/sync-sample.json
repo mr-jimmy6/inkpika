@@ -1,0 +1,319 @@
+{
+  "fixture_sha256": {
+    "01_中文排版测试.azw3": "e8e5e1b66a43bb62e4501f19b9def5bbca32395ff606bbcf38c58ddba71bccd8",
+    "02_English + 空格测试.azw3": "dd1482b035ebd350466e39792bf18660d6e388f2047512c86b28909b6f9758a2",
+    "03_目录与列表测试.azw3": "032e37eefd20e516dd7d41af182fefcdf586553d713c03458465bf2de658a2bf"
+  },
+  "records": {
+    "after": {
+      "snapshot": {
+        "phase": "idle",
+        "running": false,
+        "fresh": true,
+        "known": true,
+        "total": 3,
+        "downloaded": 3,
+        "pending": 0,
+        "unfinished": [],
+        "books": [
+          {
+            "key": "sync/01_中文排版测试.azw3",
+            "modified": 1794096000,
+            "size": 13697,
+            "status": "downloaded"
+          },
+          {
+            "key": "sync/02_English + 空格测试.azw3",
+            "modified": 1794096000,
+            "size": 13001,
+            "status": "downloaded"
+          },
+          {
+            "key": "sync/03_目录与列表测试.azw3",
+            "modified": 1794096000,
+            "size": 13240,
+            "status": "downloaded"
+          }
+        ],
+        "fetched": 3,
+        "skipped": 0,
+        "updated": 1794120084
+      },
+      "menu": [
+        {
+          "name": "全部书籍 · 3/3 已下载",
+          "items": [
+            {
+              "name": "[OK] 01_中文排版测试.azw3",
+              "items": [
+                {
+                  "name": "文件：01_中文排版测试.azw3"
+                },
+                {
+                  "name": "状态：已下载，与远端一致"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13697 字节"
+                }
+              ]
+            },
+            {
+              "name": "[OK] 02_English + 空格测试.azw3",
+              "items": [
+                {
+                  "name": "文件：02_English + 空格测试.azw3"
+                },
+                {
+                  "name": "状态：已下载，与远端一致"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13001 字节"
+                }
+              ]
+            },
+            {
+              "name": "[OK] 03_目录与列表测试.azw3",
+              "items": [
+                {
+                  "name": "文件：03_目录与列表测试.azw3"
+                },
+                {
+                  "name": "状态：已下载，与远端一致"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13240 字节"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "开始同步",
+          "preview": "start"
+        },
+        {
+          "name": "查看状态",
+          "items": [
+            {
+              "name": "刷新状态",
+              "preview": "refresh"
+            },
+            {
+              "name": "状态：就绪"
+            },
+            {
+              "name": "总计3 已下载3 待同步0"
+            },
+            {
+              "name": "检查：11-08 14:41"
+            },
+            {
+              "name": "本次下载3 · 跳过0"
+            },
+            {
+              "name": "缩写说明",
+              "items": [
+                {
+                  "name": "OK = 已下载且版本一致"
+                },
+                {
+                  "name": "NEW = 未下载"
+                },
+                {
+                  "name": "UPD = 待更新或重新校验"
+                },
+                {
+                  "name": "ERR = 检查或下载失败"
+                },
+                {
+                  "name": "DL = 正在下载"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "before": {
+      "snapshot": {
+        "phase": "idle",
+        "running": false,
+        "fresh": true,
+        "known": true,
+        "total": 3,
+        "downloaded": 0,
+        "pending": 3,
+        "unfinished": [
+          {
+            "key": "sync/01_中文排版测试.azw3",
+            "modified": 1794096000,
+            "size": 13697,
+            "status": "pending",
+            "reason": "未下载"
+          },
+          {
+            "key": "sync/02_English + 空格测试.azw3",
+            "modified": 1794096000,
+            "size": 13001,
+            "status": "pending",
+            "reason": "未下载"
+          },
+          {
+            "key": "sync/03_目录与列表测试.azw3",
+            "modified": 1794096000,
+            "size": 13240,
+            "status": "pending",
+            "reason": "未下载"
+          }
+        ],
+        "books": [
+          {
+            "key": "sync/01_中文排版测试.azw3",
+            "modified": 1794096000,
+            "size": 13697,
+            "status": "pending",
+            "reason": "未下载"
+          },
+          {
+            "key": "sync/02_English + 空格测试.azw3",
+            "modified": 1794096000,
+            "size": 13001,
+            "status": "pending",
+            "reason": "未下载"
+          },
+          {
+            "key": "sync/03_目录与列表测试.azw3",
+            "modified": 1794096000,
+            "size": 13240,
+            "status": "pending",
+            "reason": "未下载"
+          }
+        ],
+        "fetched": 0,
+        "skipped": 0,
+        "updated": 1794120083
+      },
+      "menu": [
+        {
+          "name": "全部书籍 · 0/3 已下载",
+          "items": [
+            {
+              "name": "[NEW] 01_中文排版测试.azw3",
+              "items": [
+                {
+                  "name": "文件：01_中文排版测试.azw3"
+                },
+                {
+                  "name": "状态：未下载"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13697 字节"
+                },
+                {
+                  "name": "未下载"
+                }
+              ]
+            },
+            {
+              "name": "[NEW] 02_English + 空格测试.azw3",
+              "items": [
+                {
+                  "name": "文件：02_English + 空格测试.azw3"
+                },
+                {
+                  "name": "状态：未下载"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13001 字节"
+                },
+                {
+                  "name": "未下载"
+                }
+              ]
+            },
+            {
+              "name": "[NEW] 03_目录与列表测试.azw3",
+              "items": [
+                {
+                  "name": "文件：03_目录与列表测试.azw3"
+                },
+                {
+                  "name": "状态：未下载"
+                },
+                {
+                  "name": "更新：11-08 08:00"
+                },
+                {
+                  "name": "AZW3 · 13240 字节"
+                },
+                {
+                  "name": "未下载"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "开始同步",
+          "preview": "start"
+        },
+        {
+          "name": "查看状态 · 待同步3",
+          "items": [
+            {
+              "name": "刷新状态",
+              "preview": "refresh"
+            },
+            {
+              "name": "状态：就绪"
+            },
+            {
+              "name": "总计3 已下载0 待同步3"
+            },
+            {
+              "name": "检查：11-08 14:41"
+            },
+            {
+              "name": "本次下载0 · 跳过0"
+            },
+            {
+              "name": "缩写说明",
+              "items": [
+                {
+                  "name": "OK = 已下载且版本一致"
+                },
+                {
+                  "name": "NEW = 未下载"
+                },
+                {
+                  "name": "UPD = 待更新或重新校验"
+                },
+                {
+                  "name": "ERR = 检查或下载失败"
+                },
+                {
+                  "name": "DL = 正在下载"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

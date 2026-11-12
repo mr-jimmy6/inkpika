@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: .go-version
+          cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: sh scripts/check.sh
+      - run: sh scripts/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkpika-0.0.1.dev-armv5
+          path: |
+            dist/inkpika-0.0.1.dev-armv5.zip
+            dist/inkpika-0.0.1.dev-armv5.zip.sha256
+          if-no-files-found: error
