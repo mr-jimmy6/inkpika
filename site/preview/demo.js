@@ -2,6 +2,7 @@
   'use strict';
   var model = window.inkpikaDemo, view = 'kual', trail = [], menuPage = 0;
   var frame = document.getElementById('native');
+  var viewport = document.querySelector('.device-viewport');
   var token = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
   var names = {kual: 'InkPika', cloud: I18n.t("Cloud library"), 'wireless-device': I18n.t("Wireless transfer · connection page"), wireless: I18n.t("Wireless transfer · phone / computer"), 'settings-device': I18n.t("Settings · connection page"), settings: I18n.t("Settings · phone / computer")};
   var deviceTasks = {
@@ -21,6 +22,10 @@
     settings: I18n.t("Switch platforms, edit folders and formats, select Save and apply, then return to the cloud library. Use demo values only.")
   };
   function el(id) { return document.getElementById(id); }
+  function fitKindleScreen() {
+    var scale = viewport.parentNode.getBoundingClientRect().width / viewport.offsetWidth;
+    viewport.style.setProperty('--kindle-scale', scale);
+  }
   function status(message) { if (message) { el('status').textContent = message; } }
   function button(label, action) { var node = document.createElement('button'); node.type = 'button'; node.textContent = label; node.onclick = action; return node; }
   function updateServices() {
@@ -81,6 +86,7 @@
     el('device-location').textContent = onKindle ? I18n.t("You are using Kindle") : I18n.t("You are using a phone / computer");
     el('device-task').textContent = deviceTasks[name];
     el('device-frame').className = 'device-frame device-frame--' + (onKindle ? 'kindle' : 'companion');
+    if (onKindle) { fitKindleScreen(); }
     el('device-frame').setAttribute('aria-label', onKindle ? I18n.t("Kindle screen preview") : I18n.t("Phone / computer browser preview"));
     ['kindle', 'companion'].forEach(function (device) {
       var active = device === (onKindle ? 'kindle' : 'companion'), route = el('route-' + device);
@@ -134,5 +140,6 @@
     nav[i].onclick = function () { if (this.getAttribute('data-view') === 'kual') { trail = []; menuPage = 0; } openView(this.getAttribute('data-view')); };
   }
   window.addEventListener('hashchange', function () { trail = []; menuPage = 0; openView(window.location.hash.slice(1), false, true); });
+  window.addEventListener('resize', fitKindleScreen);
   openView(window.location.hash.slice(1) || 'kual', false, true);
 }());

@@ -43,12 +43,14 @@
           <div id="device-frame" class="device-frame device-frame--kindle" role="group" aria-label="Kindle screen preview" aria-describedby="device-task">
             <div class="browser-chrome" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span>Phone / computer browser</span><span class="browser-sample">Local sample</span></div>
             <div class="device-screen">
-              <div id="kual-view">
-                <div class="kual-toolbar"><button id="back" type="button" disabled>← Back</button><p id="menu-path">InkPika</p></div>
-                <div id="menu"></div>
-                <nav id="menu-pages" class="menu-pages" aria-label="Menu pagination" hidden><button id="menu-prev" type="button">Previous</button><span id="menu-page"></span><button id="menu-next" type="button">Next</button></nav>
+              <div class="device-viewport">
+                <div id="kual-view">
+                  <div class="kual-toolbar"><button id="back" type="button" disabled>← Back</button><p id="menu-path">InkPika</p></div>
+                  <div id="menu"></div>
+                  <nav id="menu-pages" class="menu-pages" aria-label="Menu pagination" hidden><button id="menu-prev" type="button">Previous</button><span id="menu-page"></span><button id="menu-next" type="button">Next</button></nav>
+                </div>
+                <div id="web-view" hidden><iframe id="native" title="InkPika native web preview" src="about:blank"></iframe></div>
               </div>
-              <div id="web-view" hidden><iframe id="native" title="InkPika native web preview" src="about:blank"></iframe></div>
             </div>
             <div class="device-chin" aria-hidden="true"><span class="kindle-wordmark">kindle</span><span class="phone-home"></span></div>
           </div>
