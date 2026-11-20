@@ -1,6 +1,6 @@
 # InkPika开发文档
 
-本文描述InkPika 0.0.1.dev的源码架构。安装与使用见 [README](../README.md)，开发环境、构建与 SSH 真机调试见 [README_DEV.md](../README_DEV.md)，配置与状态规则见 [兼容约定](COMPATIBILITY.md)，本版本验证范围见 [设备验证](DEVICE_VALIDATION.md)。
+本文描述 InkPika 0.0.1 的源码架构。安装与使用见 [README](../README.md)，开发环境、构建与 SSH 真机调试见 [README_DEV.md](../README_DEV.md)，配置与状态规则见 [兼容约定](COMPATIBILITY.md)，本版本验证范围见 [设备验证](DEVICE_VALIDATION.md)。
 
 ## 运行边界
 

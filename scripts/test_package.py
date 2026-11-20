@@ -64,7 +64,7 @@ class PackageTests(unittest.TestCase):
         self.binary.write_bytes(self.binary.read_bytes() + b"changed")
         second = release.package(self.root, self.binary, self.output, "2026-11-09T02:03:04Z")
         self.assertEqual(first, second)
-        self.assertEqual(second.name, "inkpika-0.0.1.dev-armv5.zip")
+        self.assertEqual(second.name, f"inkpika-{release.release_version(self.root)}-armv5.zip")
         self.assertEqual(list(self.output.glob("*.zip")), [second])
         with ZipFile(second) as archive:
             self.assertEqual(json.loads(archive.read(release.METADATA))["packaged_at"], "2026-11-09T02:03:04Z")

@@ -18,10 +18,13 @@ jobs:
           python-version: '3.x'
       - run: sh scripts/check.sh
       - run: sh scripts/build.sh
+      - name: Read package version
+        id: package
+        run: echo "version=$(cat internal/buildinfo/VERSION)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         with:
-          name: inkpika-0.0.1.dev-armv5
+          name: inkpika-${{ steps.package.outputs.version }}-armv5
           path: |
-            dist/inkpika-0.0.1.dev-armv5.zip
-            dist/inkpika-0.0.1.dev-armv5.zip.sha256
+            dist/inkpika-${{ steps.package.outputs.version }}-armv5.zip
+            dist/inkpika-${{ steps.package.outputs.version }}-armv5.zip.sha256
           if-no-files-found: error

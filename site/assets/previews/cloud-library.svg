@@ -29,7 +29,7 @@
 <text x="598" y="579" font-size="22" font-weight="700" fill="#111">下载</text>
 <path d="M28 632H730" stroke="#888"/>
 <path d="M28 669H730" stroke="#888"/>
-<text x="28" y="706" font-size="21" font-weight="700" fill="#111">InkPika · 0.0.1.dev</text>
+<text x="28" y="706" font-size="21" font-weight="700" fill="#111">InkPika · 0.0.1</text>
 <text x="28" y="740" font-size="19" font-weight="400" fill="#555">构建时间（UTC）：未打包（源码运行）</text>
 <text x="28" y="852" font-size="24" font-weight="700" fill="#111">云端书架布局示意</text>
 <text x="28" y="897" font-size="21" font-weight="400" fill="#555">图书与容量为样例；非设备截图。</text>

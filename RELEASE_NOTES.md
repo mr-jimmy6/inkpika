@@ -1,20 +1,21 @@
-# InkPika development build · 0.0.1.dev
+# InkPika 0.0.1
 
-InkPika is in development. The version remains `0.0.1.dev`; the UTC package time identifies each build.
+Transfer ebooks between a phone, computer and Kindle over Wi-Fi, or browse and download books from read-only object storage. Downloaded books open in the native Kindle reader. This version includes paired wireless upload and export, manual KUAL sync, English and Chinese interfaces, and a paired configuration editor. Settings shows masked credentials and offers connection tests.
 
-Transfer ebooks over Wi-Fi or download them from read-only object storage, then open them in the native Kindle reader. Features include paired wireless upload/export, cloud browsing and downloads, manual KUAL sync, English/Chinese interfaces, and paired configuration editing. Settings contains masked configuration information and manual connection tests; brand, version and UTC build time appear in a compact footer on every web page.
+- Download `inkpika-0.0.1-armv5.zip` and its `.zip.sha256` file. Verify the checksum before extracting the ZIP. See the [installation guide](README.md#installation).
+- Installation requires a jailbroken Kindle with KUAL and compatible Mesquite/WAF. The package targets Linux ARMv5 and was built with Go 1.23.12.
+- Supported storage protocols include Alibaba Cloud OSS, QingStor, Azure Blob and S3-compatible storage. See the [object storage guide](docs/OBJECT_STORAGE.md).
+- This release was checked locally. Physical Kindle and cloud-account checks for the 0.0.1 binary are pending. See the [validation record](docs/DEVICE_VALIDATION.md) and [device compatibility ledger](docs/DEVICE_COMPATIBILITY.md).
 
-- Package: `inkpika-0.0.1.dev-armv5.zip` and its `.zip.sha256`.
-- Installation: [user guide](README.md#installation). Requires jailbreak, KUAL and compatible Mesquite/WAF; the build targets Linux ARMv5 with Go 1.23.12.
-- Provider setup: [object storage guide](docs/OBJECT_STORAGE.md).
-- Actual test results and build identity: [validation record](docs/DEVICE_VALIDATION.md). Device requirements and remaining adaptation: [compatibility ledger](docs/DEVICE_COMPATIBILITY.md).
-
-No format conversion, DRM handling, cloud uploads or remote deletion is provided. Native reading depends on the device's formats. Code is MIT; third-party [notices](THIRD_PARTY.md) are retained. A source push does not publish a GitHub Release.
+The native reader determines which formats it can open. Format conversion, DRM handling, cloud uploads and remote deletion are outside the scope of this release. Code is licensed under MIT. See the [third-party notices](THIRD_PARTY.md).
 
 ## 简体中文
 
-InkPika 当前处于开发期，版本固定为 `0.0.1.dev`，不同构建以 UTC 打包时间区分。
+InkPika 支持通过 Wi-Fi 在手机、电脑与 Kindle 之间传书，也支持从只读对象存储浏览和下载电子书，再用 Kindle 原生阅读器打开。此版本包含配对传入与导出、KUAL 手动同步、中英文界面和配对配置编辑器。配置设置页可查看脱敏凭据并测试连接。
 
-支持无线双向传书、只读云端浏览与下载、手动 KUAL 同步、中英文界面和手机／电脑配对配置。配置信息与手动连接测试位于“配置设置”，品牌、版本和 UTC 构建时间统一显示在各 Web 页面底部。
+- 下载 `inkpika-0.0.1-armv5.zip` 和对应的 `.zip.sha256` 文件，核对摘要后解压。安装步骤见[使用说明](README_ZH.md#安装)。
+- 安装需要已越狱的 Kindle、KUAL 和兼容的 Mesquite/WAF。本包使用 Go 1.23.12 构建，目标平台为 Linux ARMv5。
+- 云存储支持阿里云 OSS、青云 QingStor、Azure Blob 和 S3 兼容服务。配置方法见[对象存储指南](docs/OBJECT_STORAGE_ZH.md)。
+- 0.0.1 已完成本地检查，当前二进制仍待 Kindle 真机和真实云账号验证。详见[验证记录](docs/DEVICE_VALIDATION.md)和[设备兼容性记录](docs/DEVICE_COMPATIBILITY.md)。
 
-安装包为 `inkpika-0.0.1.dev-armv5.zip` 及对应 `.zip.sha256`。安装方法见[使用说明](README_ZH.md#安装)，平台设置见[对象存储配置](docs/OBJECT_STORAGE_ZH.md)。测试结果和构建标识统一记录在[验证记录](docs/DEVICE_VALIDATION.md)，机型要求与适配工作见[设备兼容性文档](docs/DEVICE_COMPATIBILITY.md)。源码推送不等于发布 GitHub Release。
+可阅读的格式取决于 Kindle 原生阅读器。本版本不提供格式转换、DRM 处理、云端上传或远端删除。代码采用 MIT 许可证，第三方许可见[声明](THIRD_PARTY.md)。

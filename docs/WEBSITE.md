@@ -1,6 +1,6 @@
 # InkPika website
 
-`site/` is the public English website with an explicit Chinese language switch. It describes InkPika 0.0.1.dev, uses the same features and installation instructions as both READMEs, and links to the central feature/device validation record. The website is separate from the on-device UI and is not included in the installation ZIP.
+`site/` is the public English website with an explicit Chinese language switch. It describes InkPika 0.0.1, uses the same features and installation instructions as both READMEs, and links to the central feature/device validation record. The website is separate from the on-device UI and is not included in the installation ZIP.
 
 - Name: **InkPika**, with the same capitalization in both languages.
 - English slogan: **Transfer books over Wi-Fi. Download from your own cloud.**
@@ -39,7 +39,7 @@ Review English/Chinese content, narrow layouts, keyboard navigation, all demo en
 
 ## Installation and publication
 
-The installation entry names `inkpika-0.0.1.dev-armv5.zip` and its SHA-256 file. Local builds are available through the developer workflow; the Releases link is for packages after publication. Explain jailbreak, KUAL and the unverified device scope before installation. The agent prompt uses the prepared binary and requires a user-authorized target; SSH private keys stay on the user's computer.
+The installation entry names `inkpika-0.0.1-armv5.zip` and its SHA-256 file. The download links point to the matching GitHub Release. Developers can also build the package locally. Explain jailbreak, KUAL and the unverified device scope before installation. The agent prompt uses the prepared binary and requires a user-authorized target; SSH private keys stay on the user's computer.
 
 `.github/workflows/pages.yml` is a manually triggered Pages deployment that uploads only `site/`. GitHub Pages is configured to deploy through GitHub Actions. After an authorized source push, publish the selected commit with `gh workflow run pages.yml --ref main` and check the deployment result. A source push alone does not publish the site. Follow the repository's Gitleaks requirement before every push.
 

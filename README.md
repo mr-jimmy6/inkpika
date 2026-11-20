@@ -14,7 +14,7 @@ InkPika is intended for Kindle users across generations. Installation requires j
 
 ![InkPika feature overview: native reading, wireless book transfer, phone configuration, and cloud downloads](docs/images/feature-overview-en.png)
 
-> **In development · 0.0.1.dev** — [Build the package](README_DEV.md#构建与检查). Package: `inkpika-0.0.1.dev-armv5.zip` and its `.zip.sha256`. Every web page shows the version and UTC build time in its footer.
+> **[Download InkPika 0.0.1](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1)** · `inkpika-0.0.1-armv5.zip` and its SHA-256 checksum. Every web page shows the version and UTC build time in its footer.
 
 [Best practices](#best-practices) · [Compare transfer methods](#compare-transfer-methods) · [Installation](#installation) · [Wireless transfer](#wireless-transfer) · [Cloud configuration](#configure-from-your-phone-or-computer) · [Troubleshooting](#troubleshooting) · [Developer guide](README_DEV.md)
 
@@ -76,7 +76,7 @@ You can copy the files manually over USB or use a coding agent on your computer 
 
 ### Option 1: Copy over USB
 
-1. Obtain `inkpika-0.0.1.dev-armv5.zip` and its `.zip.sha256` from a [local build](README_DEV.md#构建与检查), verify the checksum, and extract it on your computer.
+1. Obtain `inkpika-0.0.1-armv5.zip` and its `.zip.sha256` from the [0.0.1 release](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1), verify the checksum, and extract it on your computer.
 2. Connect your Kindle over USB. Copy the package's `extensions/inkpika` folder into the Kindle USB drive's `extensions/` directory. The final path on the device must be `/mnt/us/extensions/inkpika/`; keep the directory name and avoid adding an extra directory level.
 3. Safely eject the USB drive and connect the Kindle to Wi-Fi.
 4. Open **KUAL → InkPika**. Try **Wireless transfer [web]** first; no cloud configuration is needed.
@@ -89,7 +89,7 @@ Prerequisites:
 - **Agent software:** Install a tool such as Codex, Qoder, or Workbuddy that can read project files and run local commands on your computer.
 - **SSH key authentication:** Your computer must be able to log in to the Kindle without an interactive password prompt. **USBNetwork Hack** can provide the SSH server; configure public-key authentication as described in the [developer guide](README_DEV.md#用-usbnetwork-hack-配置-ssh-密钥登录). Keep the private key on your computer.
 
-Obtain and extract the [0.0.1.dev installation package](README_DEV.md#构建与检查), then open the extracted directory in your agent. Keep the Kindle reachable and awake, and unlock it on the device when checking the interface. Developers who want to build from source can follow the [build instructions](README_DEV.md#构建与检查).
+Obtain and extract the [0.0.1 installation package](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1), then open the extracted directory in your agent. Keep the Kindle reachable and awake, and unlock it on the device when checking the interface. Developers who want to build from source can follow the [build instructions](README_DEV.md#构建与检查).
 
 Give the agent the following prompt, replacing the SSH alias with your own:
 
@@ -99,7 +99,7 @@ Device SSH alias: kindle-dev (replace with my actual alias; key authentication i
 
 Read AGENTS.md, README_DEV.md, and docs/DEVICE_COMPATIBILITY.md first.
 Verify SSH access and check the device model, firmware, and corresponding compatibility status.
-Use the executable in inkpika-0.0.1.dev-armv5.zip; no source build is needed for installation.
+Use the executable in inkpika-0.0.1-armv5.zip; no source build is needed for installation.
 Install the package's extensions/inkpika/ directory over SSH at
 /mnt/us/extensions/inkpika/, preserving executable permissions.
 Check the target directory and running services before installation; stop this project's services if needed.

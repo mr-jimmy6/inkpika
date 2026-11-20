@@ -14,7 +14,7 @@ InkPika 面向各代 Kindle 用户，安装要求已越狱并安装 KUAL。设�
 
 ![InkPika 功能总览：原生阅读、无线双向传书、手机扫码配置和云端下载](docs/images/feature-overview-zh.png)
 
-> **开发中 · 0.0.1.dev** — [构建安装包](README_DEV.md#构建与检查)。安装包为 `inkpika-0.0.1.dev-armv5.zip` 及对应 `.zip.sha256`；每个网页的页脚显示版本与 UTC 构建时间。
+> **[下载 InkPika 0.0.1](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1)** · 安装包为 `inkpika-0.0.1-armv5.zip`，附 SHA-256 校验文件。每个网页的页脚显示版本与 UTC 构建时间。
 
 [最佳实践](#最佳实践) · [传书方式对比](#传书方式对比) · [安装](#安装) · [无线传书](#无线传书) · [配置云端账号](#在手机或电脑上修改配置) · [常见问题](#故障排查) · [开发指南](README_DEV.md)
 
@@ -74,7 +74,7 @@ Kindle 上无需安装 Python、Node.js 或额外语言运行时。项目不包�
 
 ### 方式一：USB 复制安装
 
-1. 取得[本地构建](README_DEV.md#构建与检查)生成的 `inkpika-0.0.1.dev-armv5.zip` 及对应 `.zip.sha256`，核对摘要后在电脑上解压。
+1. 从 [0.0.1 发布页](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1) 下载 `inkpika-0.0.1-armv5.zip` 及对应 `.zip.sha256`，核对摘要后在电脑上解压。
 2. USB 连接 Kindle，将包内的 `extensions/inkpika` 复制到 Kindle USB 盘的 `extensions/` 目录。设备上的最终路径应为 `/mnt/us/extensions/inkpika/`，不要多套一层目录，也不要改名。
 3. 安全弹出 USB，让 Kindle 连接 Wi-Fi。
 4. 打开 **KUAL → InkPika**。首次体验可选择 **无线传书 [web]**，无需先填写云端配置。
@@ -87,7 +87,7 @@ Kindle 上无需安装 Python、Node.js 或额外语言运行时。项目不包�
 - **Agent 软件**：开发机已安装 Codex、Qoder、Workbuddy 等支持读取项目和执行本地命令的工具。
 - **SSH 密钥登录**：开发机能够免密登录 Kindle，可通过 **USBNetwork Hack** 插件提供 SSH 服务并配置公钥认证，具体步骤见[开发指南](README_DEV.md#用-usbnetwork-hack-配置-ssh-密钥登录)。私钥保留在开发机。
 
-将[0.0.1.dev 安装包](README_DEV.md#构建与检查)保存到电脑并解压，然后用 Agent 打开解压后的目录。保持 Kindle 可连接、唤醒，需要检查界面时在设备上解锁。开发者从源码构建的步骤见[开发指南](README_DEV.md#构建与检查)。
+将[0.0.1 安装包](https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1)保存到电脑并解压，然后用 Agent 打开解压后的目录。保持 Kindle 可连接、唤醒，需要检查界面时在设备上解锁。开发者从源码构建的步骤见[开发指南](README_DEV.md#构建与检查)。
 
 把下面的指令发给 Agent，将 SSH 别名替换为自己的配置：
 
@@ -97,7 +97,7 @@ Kindle 上无需安装 Python、Node.js 或额外语言运行时。项目不包�
 
 先阅读 AGENTS.md、README_DEV.md 和 docs/DEVICE_COMPATIBILITY.md，
 验证 SSH 连接并确认设备型号、固件和对应兼容状态。
-使用 inkpika-0.0.1.dev-armv5.zip 中的运行程序，安装时无需从源码编译。
+使用 inkpika-0.0.1-armv5.zip 中的运行程序，安装时无需从源码编译。
 通过 SSH 将安装包中的 extensions/inkpika/ 安装到
 /mnt/us/extensions/inkpika/，保留正确的可执行权限。
 安装前检查目标目录与运行状态，必要时停止本项目服务；

@@ -1,6 +1,17 @@
 # InkPika 功能与设备验证记录
 
-开发期版本固定为 `0.0.1.dev`，必须通过 UTC 打包时间和二进制摘要区分构建。本文集中记录实际执行的检查；README 仅链接到本文。机型适配措施及其他设备的待办见 [设备兼容性记录](DEVICE_COMPATIBILITY.md)。
+每项记录以版本、UTC 打包时间和二进制 SHA-256 标识被测构建。机型适配措施及其他设备的待办见[设备兼容性记录](DEVICE_COMPATIBILITY.md)。
+
+## 2026-11-20：0.0.1 发布构建
+
+| 项目 | 本轮检查 |
+| --- | --- |
+| 版本 / UTC 打包时间 | `0.0.1` / `2026-11-20T13:08:09Z` |
+| ARMv5 二进制 SHA-256 | `e2ff4fad83b6f85ccf95e91228165de050a6fe80548a7a5053dfc7dc0d37a226` |
+| 安装包 | `inkpika-0.0.1-armv5.zip`，ZIP 摘要见[随包校验文件](https://github.com/mr-jimmy6/inkpika/releases/download/v0.0.1/inkpika-0.0.1-armv5.zip.sha256) |
+| 本地检查 | `sh scripts/check.sh` 通过，覆盖 Go 格式、竞态测试、vet、shell 语法和 22 项 Python 测试。网站演示已重新生成，8 项 Node 测试通过。 |
+| 构建与产物 | `sh scripts/build.sh` 通过。已核对 Go 1.23.12、Linux/ARM、GOARM=5、CGO_ENABLED=0、51 项 ZIP 白名单、两处 XML 版本和二进制内的 UTC 打包时间。 |
+| 待验证 | 本构建尚未在 PW2 或其他 Kindle 上安装、运行，亦未用真实云账号联调。下方历史真机结果仅适用于其列出的开发构建。 |
 
 ## 2026-11-13：紧凑 Web 界面与品牌配图（未做真机复验）
 

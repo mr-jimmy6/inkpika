@@ -2,7 +2,7 @@
 
 本文面向开发者，包含本地构建、预览、SSH 连接和真机调试。安装与日常使用见 [README](README.md)，提交规范见 [CONTRIBUTING.md](CONTRIBUTING.md)，架构与接口细节见 [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)。
 
-当前为开发版本 **0.0.1.dev**，固定在 [`internal/buildinfo/VERSION`](internal/buildinfo/VERSION)。安装包为 `inkpika-0.0.1.dev-armv5.zip`，UTC 打包时间区分具体构建。测试结果统一维护在 [验证记录](docs/DEVICE_VALIDATION.md)。
+当前版本 **0.0.1** 取自 [`internal/buildinfo/VERSION`](internal/buildinfo/VERSION)。安装包为 `inkpika-0.0.1-armv5.zip`，UTC 打包时间区分具体构建。测试结果统一维护在 [验证记录](docs/DEVICE_VALIDATION.md)。
 
 ## 开发环境
 
@@ -34,7 +34,7 @@ sh scripts/build.sh
 
 - `check.sh`：Go 格式检查、race tests、vet、shell 语法、脚本生命周期和发行打包检查。
 - `build.sh`：使用固定工具链生成 ARM 二进制，按白名单打包；版本从 `internal/buildinfo/VERSION` 读取；生成一次 UTC 打包时间，同时注入二进制和扩展中的 `build.json`，在 CLI `-version`、本机配置信息和配对配置页面显示。设置 `SOURCE_DATE_EPOCH` 可得到固定时间的可复现构建。源码直接运行时显示“未打包”，不使用当前时间冒充包时间。
-- 当前产物：`dist/inkpika-0.0.1.dev-armv5.zip` 及对应 `.zip.sha256`。包内不包含个人配置、运行状态、日志或密钥。
+- 当前产物：`dist/inkpika-0.0.1-armv5.zip` 及对应 `.zip.sha256`。包内不包含个人配置、运行状态、日志或密钥。
 
 自动测试使用本地夹具，不需要真实云账号或设备。若当前网络无法下载 Go 工具链，可仅为本次构建设置自己信任的镜像，例如：
 
@@ -123,7 +123,7 @@ sh scripts/deploy.sh root@192.168.1.100 -p 22 -i ~/.ssh/kindle_dev
 sh scripts/deploy.sh kindle-dev --skip-check
 
 # 使用已打包的 ZIP；跳过源码检查、编译和打包。
-sh scripts/deploy.sh kindle-dev --package dist/inkpika-0.0.1.dev-armv5.zip
+sh scripts/deploy.sh kindle-dev --package dist/inkpika-0.0.1-armv5.zip
 ```
 
 `kindle-dev` 是开发机 SSH 配置中的示例别名，必须替换为明确授权安装的设备；脚本没有默认目标，也不查找设备。脚本使用非交互认证和严格主机密钥校验，沿用本机 SSH 配置，不自动放宽旧设备的加密算法。首次连接应先手工执行 `ssh kindle-dev` 核对主机密钥。通过脚本绝对路径调用时可以位于任意工作目录。

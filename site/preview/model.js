@@ -298,7 +298,7 @@
   }
   function reset() {
     timers.forEach(clearTimeout); timers = []; urls.forEach(function (url) { URL.revokeObjectURL(url); }); urls = []; epoch += 1;
-    state = {services: {cloud: false, wireless: false, settings: false}, pairVersion: {cloud: epoch, wireless: epoch, settings: epoch}, saved: {}, local: [], jobs: [], jobTimer: false, syncPhase: 'before', syncRun: 0, syncFetched: 0, syncSkipped: 0, revision: 1, check: {}, config: {version: '0.0.1.dev', packaged_at: '', provider: 'aliyun_oss', bucket: 'demo-library', region: 'cn-beijing', endpoint: '', prefix: '', download_dir: '/mnt/us/documents/InkPika', max_download_mb: 512, ebook_formats: defaults.slice(), access_key_id_masked: 'de****id', secret_access_key_masked: 'de****et', security_token_set: false, s3_preset: '', s3_addressing: '', ca_bundle: '', socks5_proxy_set: false}};
+    state = {services: {cloud: false, wireless: false, settings: false}, pairVersion: {cloud: epoch, wireless: epoch, settings: epoch}, saved: {}, local: [], jobs: [], jobTimer: false, syncPhase: 'before', syncRun: 0, syncFetched: 0, syncSkipped: 0, revision: 1, check: {}, config: {version: '0.0.1', packaged_at: '', provider: 'aliyun_oss', bucket: 'demo-library', region: 'cn-beijing', endpoint: '', prefix: '', download_dir: '/mnt/us/documents/InkPika', max_download_mb: 512, ebook_formats: defaults.slice(), access_key_id_masked: 'de****id', secret_access_key_masked: 'de****et', security_token_set: false, s3_preset: '', s3_addressing: '', ca_bundle: '', socks5_proxy_set: false}};
     books.forEach(function (book) { addLocal(book.name, book.bytes, 'InkPika/Wireless'); });
     model.state = state; notify(I18n.t("Sample reset; three test books are waiting to sync."));
   }

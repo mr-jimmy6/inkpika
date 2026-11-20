@@ -1,6 +1,6 @@
 # InkPika 配置与状态约定
 
-本文记录 InkPika 0.0.1.dev 的当前数据格式和后续维护要求。设备兼容性另见 [DEVICE_COMPATIBILITY.md](DEVICE_COMPATIBILITY.md)，安装见 [README](../README.md)。
+本文记录 InkPika 0.0.1 的当前数据格式和后续维护要求。设备兼容性另见 [DEVICE_COMPATIBILITY.md](DEVICE_COMPATIBILITY.md)，安装见 [README](../README.md)。
 
 ## 标识与路径
 

@@ -1,19 +1,21 @@
 # InkPika 设备兼容性与适配记录
 
-## 0.0.1.dev 设备验证状态
+## 0.0.1 设备验证状态
 
 | 设备 / 类别 | 固件 / 内核 | KUAL | 测试构建 / 日期 | 功能覆盖 / 证据 |
 | --- | --- | --- | --- | --- |
-| 日版 Kindle Paperwhite 2（PW2，工程基线） | 5.12.2.2 / Linux 3.0.35 | v2.7.32-g74c69f9（20240104） | 0.0.1.dev / 2026-11-12 / 5036b663f9b2 | 该摘要构建的 KUAL 子菜单与配置入口、配置、OSS 连接与列举、配对及无线传入／导出通过；后续紧凑界面未做真机复验；详见[验证记录](DEVICE_VALIDATION.md) |
+| 日版 Kindle Paperwhite 2（PW2，工程基线） | 5.12.2.2 / Linux 3.0.35 | v2.7.32-g74c69f9（20240104） | 0.0.1 未做真机验证；上次实测为 0.0.1.dev / 2026-11-12 / 5036b663f9b2 | 该摘要构建的 KUAL 子菜单与配置入口、配置、OSS 连接与列举、配对及无线传入／导出通过；后续紧凑界面未做真机复验；详见[验证记录](DEVICE_VALIDATION.md) |
 | 其他 Kindle 型号 / 固件 | 待逐类确认 | 待确认 | 未测试 | 无本版本真机证据 |
 
-InkPika 面向各代 Kindle；安装要求已越狱并安装 KUAL。产品目标不等同于已验证支持。**PW2 的本次功能覆盖见上表；其他设备类别仍无专门适配或真机证据。**
+InkPika 面向各代 Kindle；安装要求已越狱并安装 KUAL。产品目标不等同于已验证支持。**PW2 的历史实测范围见上表；其他设备类别仍无专门适配或真机证据。**
 
 共享实现表示代码已存在，不表示已在设备运行通过。配置和状态格式见 [COMPATIBILITY.md](COMPATIBILITY.md)。
 
 ## 各类设备的兼容工作
 
 ### 1. PW2：工程基线
+
+以下真机结果对应表中的 2026-11-12 开发构建。0.0.1 的本地检查见[验证记录](DEVICE_VALIDATION.md)。
 
 - **共享实现**：Go 1.23.12、`CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=5`，POSIX sh / BusyBox，ES5 和系统字体，无额外设备运行时。
 - **系统集成**：Mesquite/WAF 应用 `com.inkpika.app` 与 `local-port-access`；安装于 `/mnt/us/extensions/inkpika`，文档目录 `/mnt/us/documents/InkPika`；无线传书和配置使用独立防火墙链。本次已验证该 PW2 的安装、二进制运行、WAF 配置／云端页面及配对服务。

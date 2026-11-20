@@ -56,7 +56,7 @@
           <a class="button button-primary" href="#get-started">Get InkPika <svg class="icon"><use href="#i-arrow"></use></svg></a>
           <a class="text-link" href="preview/index.html" target="_blank" rel="noopener">Try all features first <svg class="icon small"><use href="#i-external"></use></svg></a>
         </div>
-        <p class="hero-requirement">Requires jailbreak and KUAL · In development<br><a href="https://github.com/mr-jimmy6/inkpika/blob/main/docs/DEVICE_COMPATIBILITY.md">View device compatibility and adaptation records ↗</a></p>
+        <p class="hero-requirement">Requires jailbreak and KUAL<br><a href="https://github.com/mr-jimmy6/inkpika/blob/main/docs/DEVICE_COMPATIBILITY.md">View device compatibility and adaptation records ↗</a></p>
       </div>
       <figure class="hero-art" aria-label="Kindle illustration showing an InkPika cloud library example">
         <div class="art-circle"></div>
@@ -228,7 +228,7 @@
           <p>Let an AI assistant on your computer handle installation. Copy the prompt below so it can follow the project docs, prepare files, install to Kindle and check the result.</p>
           <div class="agent-requirements"><strong>Prepare the connection</strong><p>Install a local-file-capable agent such as Codex, Qoder or Workbuddy, and ensure SSH key login to Kindle already works. For connection setup, see <a href="https://github.com/mr-jimmy6/inkpika/blob/main/README_DEV.md#用-usbnetwork-hack-配置-ssh-密钥登录">USBNetwork Hack connection guide ↗</a>.</p></div>
           <ol class="agent-steps">
-            <li>Obtain the <a href="https://github.com/mr-jimmy6/inkpika/blob/main/README_DEV.md#构建与检查">local 0.0.1.dev build</a> or check <a href="https://github.com/mr-jimmy6/inkpika/releases">Releases when published</a>. Verify the checksum, extract inkpika-0.0.1.dev-armv5.zip and open the folder in your agent.</li>
+            <li>Obtain the <a href="https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1">0.0.1 installation package and checksum</a>. Verify the checksum, extract inkpika-0.0.1-armv5.zip and open the folder in your agent.</li>
             <li>Keep Kindle reachable and awake. Send the prompt below and provide its SSH alias (the connection name saved on your computer).</li>
             <li>Follow any instructions requiring Kindle screen interaction, then wait for the installation report.</li>
           </ol>
@@ -244,13 +244,13 @@ Before installing, inspect the target directory and running services; stop this 
 Explain any steps that require my interaction on the Kindle screen. When finished, tell me how to start wireless transfer in KUAL and report the checks actually performed.</textarea>
             <p id="agent-copy-status" class="copy-status" role="status" aria-live="polite">You can also select and copy the text above.</p>
           </div>
-          <p class="small-text">Development version: 0.0.1.dev. Package: inkpika-0.0.1.dev-armv5.zip and its .zip.sha256. Every web page shows the version and UTC build time in its footer.</p>
-          <p class="small-text agent-release-note">The package includes the executable. Your private key stays on your computer. <a href="https://github.com/mr-jimmy6/inkpika/releases">Read release notes ↗</a></p>
+          <p class="small-text">Every InkPika page shows the installed version and UTC build time in its footer.</p>
+          <p class="small-text agent-release-note">The package includes the executable. Your private key stays on your computer. <a href="https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1">Read release notes ↗</a></p>
         </article>
         <details class="manual-install">
           <summary><span class="small-label">Option two</span><span>Install manually over USB</span><span class="manual-expand" aria-hidden="true"></span></summary>
           <div class="install-steps">
-        <article><div class="install-step-heading"><span class="step-number">01</span><h3>Download and extract the package</h3></div><p>Obtain inkpika-0.0.1.dev-armv5.zip and its checksum from a local build, or from Releases when published. Verify and extract it on your computer. It includes the executable; no manual configuration editing is required.</p><div class="download-status"><a class="button button-primary" href="https://github.com/mr-jimmy6/inkpika/releases">Check Releases <svg class="icon"><use href="#i-arrow"></use></svg></a><p class="small-text">Read the local release notes and verify the SHA-256 file. The Releases page will provide downloads after publication.</p></div></article>
+        <article><div class="install-step-heading"><span class="step-number">01</span><h3>Download and extract the package</h3></div><p>Download inkpika-0.0.1-armv5.zip and its .zip.sha256 file. Verify the checksum on your computer, then extract the ZIP.</p><div class="download-status"><a class="button button-primary" href="https://github.com/mr-jimmy6/inkpika/releases/tag/v0.0.1">Download InkPika 0.0.1 <svg class="icon"><use href="#i-arrow"></use></svg></a></div></article>
         <article><div class="install-step-heading"><span class="step-number">02</span><h3>Connect over USB and copy the folder</h3></div><p>Connect Kindle to your computer and open its drive. From the extracted <strong>extensions</strong>  folder, copy <strong>inkpika</strong> into the Kindle drive's <strong>extensions</strong>  folder. Create extensions first if it does not exist.</p><div class="path-note"><span>Folder location as seen on your computer</span><code>Kindle drive → extensions → inkpika</code></div><p class="small-text">Copy the complete inkpika folder without nesting a second folder of the same name. Safely eject Kindle when done.</p></article>
         <article><div class="install-step-heading"><span class="step-number">03</span><h3>Open KUAL and send your first book</h3></div><p>Safely eject USB and connect Kindle to Wi-Fi. Open <strong>KUAL → InkPika</strong> and choose Wireless transfer [web] to begin. Before using cloud storage, enter credentials in Settings [web].</p><a class="text-link" href="https://github.com/mr-jimmy6/inkpika/blob/main/README.md">Read the full installation and configuration guide <svg class="icon"><use href="#i-arrow"></use></svg></a></article>
           </div>

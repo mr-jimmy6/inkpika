@@ -137,9 +137,8 @@ personal paths, account/device identifiers and image metadata; secret scanning
 does not replace that privacy review.
 
 Keep README installation paths, compatibility guidance, architecture and examples
-consistent with the code. InkPika is in development: keep the package version fixed at
-`0.0.1.dev` in `internal/buildinfo/VERSION` until a release version is explicitly authorized.
-The package is `inkpika-0.0.1.dev-armv5.zip` plus its checksum. Derive package metadata
+consistent with the code. Change `internal/buildinfo/VERSION` only when a new
+release version is explicitly authorized. The package is `inkpika-<version>-armv5.zip` plus its checksum. Derive package metadata
 from that version source; do not bump it for ordinary development changes.
 Embed the same UTC package time in the executable and `build.json`. Show InkPika, version and UTC build time in a compact footer on every web page,
 including unpaired LAN pages; do not repeat them in configuration tables.
@@ -147,7 +146,7 @@ Use compact task navigation and prioritize content/actions over repeated heading
 Keep configuration information and manual connection tests in Settings; the cloud
 library page contains browsing and downloads. Pairing and editing stay in their
 separate authenticated settings service; transfer must never expose configuration.
-Maintain `RELEASE_NOTES.md` as the current development distribution notes; do not
+Maintain `RELEASE_NOTES.md` as the current distribution notes; do not
 claim an initial stable release, add renamed-product history or add migration-only tools.
 Keep current technical requirements, data formats, licenses and compatibility limits.
 Keep READMEs concise: installation, everyday usage, prerequisites and documentation links.
